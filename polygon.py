@@ -1,11 +1,6 @@
-from polygenerator import (
-    random_polygon,
-    random_star_shaped_polygon,
-    random_convex_polygon,
-)
+from polygenerator import random_polygon
 # these two are only for demonstration
 import matplotlib.pyplot as plt
-import random
 
 
 def plot_polygon(polygon, out_file_name):
@@ -28,7 +23,7 @@ def plot_polygon(polygon, out_file_name):
 
 polygon = random_polygon(num_points=20)
 polygon.reverse()
-f = open("input.txt", "w")
+f = open("polygon.txt", "w")
 for (x, y) in polygon:
     x *= 100
     y *= 100

@@ -149,6 +149,23 @@ void DCEL::print_()
         cout << '\n';
     }
 }
+void DCEL::outputPolygon(char *file)
+{
+    freopen(file, "w+", stdout);
+    for (int i = 0; i < faces.size(); i++)
+    {
+        HalfEdge *temp = faces[i]->he;
+        // cout << "Face: " << faces[i]->id << '\n';
+        cout << temp->v->x << " " << temp->v->y << '\n';
+        temp = temp->next;
+        while (temp != faces[i]->he)
+        {
+            cout << temp->v->x << " " << temp->v->y << '\n';
+            temp = temp->next;
+        }
+        cout << "$\n";
+    }
+}
 DCEL::~DCEL()
 {
     vertices.clear();

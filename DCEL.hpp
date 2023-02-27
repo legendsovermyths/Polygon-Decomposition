@@ -47,6 +47,7 @@ public:
     void addVertex(double x, double y);
     void addFace(int id);
     void createPolygon(char *file);
+    void outputPolygon(char *file);
     DCEL();
     ~DCEL();
     void print_();

@@ -6,20 +6,30 @@
 using namespace std;
 
 class Face;
+/// @brief Represents the vertex of the polygon.
 class Vertex
 {
 public:
+    /// Index of the vertex
     int index;
+    /// x-coordinate of the vertex
     double x;
+    /// y-coordinate of the vertex
     double y;
 };
+/// @brief Represents a directed edge
 class HalfEdge
 {
 public:
+    /// @brief Vertex on which the edge is incident on
     Vertex *v;
+    /// @brief Face on the right side of the directed edge
     Face *f;
+    /// @brief The other half of the edge containing pointing to the Vertex this HalfEdge is incident on.
     HalfEdge *twin;
+    /// @brief The next edge pointed by the directed edge.
     HalfEdge *next;
+    /// @brief The previous edge this edge is pointing to.
     HalfEdge *prev;
 };
 class Face
@@ -36,9 +46,6 @@ public:
     Edge(HalfEdge *a, HalfEdge *b);
 };
 
-/*!@brief Doubly connected edge list is a  data structure
- *
- */
 class DCEL
 {
 public:

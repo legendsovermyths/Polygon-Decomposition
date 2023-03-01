@@ -2,27 +2,39 @@
 \label{classHalfEdge}\index{HalfEdge@{HalfEdge}}
 
 
+Represents a directed edge.  
+
+
+
+
+{\ttfamily \#include $<$DCEL.\+hpp$>$}
+
+
+
 Collaboration diagram for Half\+Edge\+:
 % FIG 0
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classHalfEdge_ac239343aea2159d5958fc9eac51389d4}\label{classHalfEdge_ac239343aea2159d5958fc9eac51389d4}} 
-\mbox{\hyperlink{classVertex}{Vertex}} $\ast$ {\bfseries v}
-\item 
+\mbox{\hyperlink{classVertex}{Vertex}} $\ast$ \mbox{\hyperlink{classHalfEdge_ac239343aea2159d5958fc9eac51389d4}{v}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classVertex}{Vertex}} on which the edge is incident on. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classHalfEdge_a54d9f243ea78bec79dcf983b81447fa1}\label{classHalfEdge_a54d9f243ea78bec79dcf983b81447fa1}} 
-\mbox{\hyperlink{classFace}{Face}} $\ast$ {\bfseries f}
-\item 
+\mbox{\hyperlink{classFace}{Face}} $\ast$ \mbox{\hyperlink{classHalfEdge_a54d9f243ea78bec79dcf983b81447fa1}{f}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classFace}{Face}} on the right side of the directed edge. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classHalfEdge_a37e7696a7131767a0c76e45ed69be4c5}\label{classHalfEdge_a37e7696a7131767a0c76e45ed69be4c5}} 
-\mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$ {\bfseries twin}
-\item 
+\mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$ \mbox{\hyperlink{classHalfEdge_a37e7696a7131767a0c76e45ed69be4c5}{twin}}
+\begin{DoxyCompactList}\small\item\em The other half of the edge containing pointing to the \mbox{\hyperlink{classVertex}{Vertex}} this \mbox{\hyperlink{classHalfEdge}{Half\+Edge}} is incident on. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classHalfEdge_a5918db069bb8b4a89e471c01a14fc6e1}\label{classHalfEdge_a5918db069bb8b4a89e471c01a14fc6e1}} 
-\mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$ {\bfseries next}
-\item 
+\mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$ \mbox{\hyperlink{classHalfEdge_a5918db069bb8b4a89e471c01a14fc6e1}{next}}
+\begin{DoxyCompactList}\small\item\em The next edge pointed by the directed edge. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classHalfEdge_a02bbf630ad01fd4d7bf4af38e286844e}\label{classHalfEdge_a02bbf630ad01fd4d7bf4af38e286844e}} 
-\mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$ {\bfseries prev}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$ \mbox{\hyperlink{classHalfEdge_a02bbf630ad01fd4d7bf4af38e286844e}{prev}}
+\begin{DoxyCompactList}\small\item\em The previous edge this edge is pointing to. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Represents a directed edge. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

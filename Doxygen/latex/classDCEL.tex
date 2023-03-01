@@ -1,20 +1,10 @@
 \hypertarget{classDCEL}{}\doxysection{DCEL Class Reference}
 \label{classDCEL}\index{DCEL@{DCEL}}
-
-
-Doubly connected edge list is a data structure.  
-
-
-
-
-{\ttfamily \#include $<$DCEL.\+hpp$>$}
-
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classDCEL_a8994c0373b1d48b78a73615d2e108432}\label{classDCEL_a8994c0373b1d48b78a73615d2e108432}} 
-\mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$ {\bfseries add\+Edge} (\mbox{\hyperlink{classVertex}{Vertex}} $\ast$\&v1, \mbox{\hyperlink{classVertex}{Vertex}} $\ast$\&v2, \mbox{\hyperlink{classFace}{Face}} $\ast$\&curr\+Face)
-\item 
+\mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$ \mbox{\hyperlink{classDCEL_a8994c0373b1d48b78a73615d2e108432}{add\+Edge}} (\mbox{\hyperlink{classVertex}{Vertex}} $\ast$\&v1, \mbox{\hyperlink{classVertex}{Vertex}} $\ast$\&v2, \mbox{\hyperlink{classFace}{Face}} $\ast$\&curr\+Face)
+\begin{DoxyCompactList}\small\item\em adds edge between two vertices present in a face. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classDCEL_aec3ba67e24735cb104ffb799e0cdb84c}\label{classDCEL_aec3ba67e24735cb104ffb799e0cdb84c}} 
 void {\bfseries remove\+Edge} (\mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$\&h)
 \item 
@@ -30,6 +20,9 @@ void {\bfseries create\+Polygon} (char $\ast$file)
 \mbox{\Hypertarget{classDCEL_aba8612f5d73036f4cd8fed45811a33cc}\label{classDCEL_aba8612f5d73036f4cd8fed45811a33cc}} 
 void {\bfseries output\+Polygon} (char $\ast$file)
 \item 
+\mbox{\Hypertarget{classDCEL_a5f12fccd0a8f0cd3450a21e9a2fafbd8}\label{classDCEL_a5f12fccd0a8f0cd3450a21e9a2fafbd8}} 
+\mbox{\hyperlink{classDCEL_a5f12fccd0a8f0cd3450a21e9a2fafbd8}{DCEL}} ()
+\begin{DoxyCompactList}\small\item\em initialzes the \mbox{\hyperlink{classDCEL}{DCEL}} to connect one exterior face \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classDCEL_a3b6dd77165405b3e8173da850b2f6c26}\label{classDCEL_a3b6dd77165405b3e8173da850b2f6c26}} 
 void {\bfseries print\+\_\+} ()
 \end{DoxyCompactItemize}
@@ -53,8 +46,30 @@ int {\bfseries vertex\+ID} = 0
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-Doubly connected edge list is a data structure. 
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDCEL_a8994c0373b1d48b78a73615d2e108432}\label{classDCEL_a8994c0373b1d48b78a73615d2e108432}} 
+\index{DCEL@{DCEL}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$ DCEL\+::add\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}} $\ast$\&}]{v1,  }\item[{\mbox{\hyperlink{classVertex}{Vertex}} $\ast$\&}]{v2,  }\item[{\mbox{\hyperlink{classFace}{Face}} $\ast$\&}]{curr\+Face }\end{DoxyParamCaption})}
+
+
+
+adds edge between two vertices present in a face. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v1} & \mbox{\hyperlink{classVertex}{Vertex}} from which the edge has to made and returned. \\
+\hline
+{\em v2} & \mbox{\hyperlink{classVertex}{Vertex}} to which edge has to be retuned. \\
+\hline
+{\em curr\+Face} & curr\+Face The face that needs to be split by the added edge. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classHalfEdge}{Half\+Edge}} from v1. 
+\end{DoxyReturn}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

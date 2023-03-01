@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dcel_0',['DCEL',['../classDCEL.html',1,'']]]
+  ['addedge_0',['addEdge',['../classDCEL.html#a8994c0373b1d48b78a73615d2e108432',1,'DCEL']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['face_10',['Face',['../classFace.html',1,'']]]
+  ['face_20',['Face',['../classFace.html',1,'']]]
 ];

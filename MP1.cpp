@@ -2,11 +2,20 @@
 #include "Utils.hpp"
 #include "DCEL.hpp"
 
-bool MP1::primeMP1(DCEL *polygon)
+MP1::MP1(DCEL *&dcel)
+{
+    notches = getAllNotches(dcel->faces[EXTERNAL_FACE]);
+    polygon = dcel;
+    for (int i = 0; i < notches.size(); i++)
+    {
+        cout << notches[i]->index << " ";
+    }
+    cout << '\n';
+}
+bool MP1::primeMP1()
 {
     L.clear();
-    vector<Vertex *> notches = getAllNotches(polygon->faces[0]);
-    HalfEdge *begin = polygon->faces[1]->he;
+    HalfEdge *begin = polygon->faces[WORKING_FACE]->he;
     int k = st++;
     while (k--)
         begin = begin->next;
@@ -31,11 +40,11 @@ bool MP1::primeMP1(DCEL *polygon)
         next_begin = next_begin->next;
         vi_p = next_begin->next->v;
     }
-    // for (int i = 0; i < L.size(); i++)
-    // {
-    //     cout << L[i]->index << " ";
-    // }
-    // cout << '\n';
+    for (int i = 0; i < L.size(); i++)
+    {
+        cout << L[i]->index << " ";
+    }
+    cout << '\n';
     if (next_begin == begin)
     {
         return 1;
@@ -65,7 +74,7 @@ bool MP1::primeMP1(DCEL *polygon)
                     }
                     if (contain == 0 && r->isInside(notch) == 1 && isInside(v_st, v_end, notch) == 1)
                     {
-                        cout << notch->index << " " << endl;
+                        cout << notch->index << '\n';
                         L.pop_back();
                         break;
                     }
@@ -78,6 +87,13 @@ bool MP1::primeMP1(DCEL *polygon)
 
     // cout << '\n'
     //      << endl;
+    for (int i = 0; i < L.size(); i++)
+    {
+        cout << L[i]->index << " ";
+    }
+    cout << '\n'
+         << endl;
+    ;
     if (L.size() > 2)
     {
         HalfEdge *h = polygon->addEdge(L[0], L[L.size() - 1], polygon->faces[1]);
@@ -86,7 +102,7 @@ bool MP1::primeMP1(DCEL *polygon)
     return 0;
 }
 
-void MP1::merge(DCEL *polygon)
+void MP1::merge()
 {
     vector<HalfEdge *> e;
     for (int i = 0; i < addedEdges.size(); i++)

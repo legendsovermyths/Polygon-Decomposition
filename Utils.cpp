@@ -9,6 +9,8 @@ vector<Vertex *> getAllNotches(Face *f)
     vector<Vertex *> v;
     HalfEdge *h = f->he;
     HalfEdge *t = h->next;
+    if (orient(h->next->v, h->v, h->prev->v) == 0)
+        v.push_back(h->v);
     while (h != t)
     {
         if (orient(t->next->v, t->v, t->prev->v) == 0)

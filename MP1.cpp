@@ -5,7 +5,7 @@
 bool MP1::primeMP1(DCEL *polygon)
 {
     L.clear();
-    vector<Vertex *> notches = getAllNotches(polygon->faces[1]);
+    vector<Vertex *> notches = getAllNotches(polygon->faces[0]);
     HalfEdge *begin = polygon->faces[1]->he;
     int k = st++;
     while (k--)
@@ -32,7 +32,10 @@ bool MP1::primeMP1(DCEL *polygon)
         vi_p = next_begin->next->v;
     }
     // for (int i = 0; i < L.size(); i++)
+    // {
     //     cout << L[i]->index << " ";
+    // }
+    // cout << '\n';
     if (next_begin == begin)
     {
         return 1;
@@ -53,9 +56,16 @@ bool MP1::primeMP1(DCEL *polygon)
                 Rectangle *r = new Rectangle(L);
                 for (int i = 0; i < notches.size(); i++)
                 {
+                    int contain = 0;
                     Vertex *notch = notches[i];
-                    if (notch != v_st && notch != v_end && r->isInside(notch) == 1 && isInside(v_st, v_end, notch) == 1)
+                    for (int b = 0; b < L.size(); b++)
                     {
+                        if (notch == L[b])
+                            contain = 1;
+                    }
+                    if (contain == 0 && r->isInside(notch) == 1 && isInside(v_st, v_end, notch) == 1)
+                    {
+                        cout << notch->index << " " << endl;
                         L.pop_back();
                         break;
                     }
@@ -69,6 +79,33 @@ bool MP1::primeMP1(DCEL *polygon)
     // cout << '\n'
     //      << endl;
     if (L.size() > 2)
-        polygon->addEdge(L[0], L[L.size() - 1], polygon->faces[1]);
+    {
+        HalfEdge *h = polygon->addEdge(L[0], L[L.size() - 1], polygon->faces[1]);
+        addedEdges.push_back(h);
+    }
     return 0;
+}
+
+void MP1::merge(DCEL *polygon)
+{
+    vector<HalfEdge *> e;
+    for (int i = 0; i < addedEdges.size(); i++)
+    {
+        Vertex *v1 = addedEdges[i]->v;
+        Vertex *v1_next = addedEdges[i]->twin->next->next->v;
+        Vertex *v1_prev = addedEdges[i]->prev->v;
+        Vertex *v2 = addedEdges[i]->twin->v;
+        Vertex *v2_next = addedEdges[i]->next->next->v;
+        Vertex *v2_prev = addedEdges[i]->twin->prev->v;
+        cout << v1_prev->index << " " << v1->index << " " << v1_next->index << endl;
+        cout << v2_prev->index << " " << v2->index << " " << v2_next->index << endl;
+        cout << endl;
+        if (orient(v1_prev, v1, v1_next) == 1 && orient(v2_prev, v2, v2_next) == 1)
+        {
+            polygon->removeEdge(addedEdges[i]);
+        }
+        else
+            e.push_back(addedEdges[i]);
+    }
+    addedEdges = e;
 }

@@ -26,8 +26,8 @@ def plot_polygon(polygon, out_file_name):
     plt.close()
 
 
-num_points = 20
-polygon = random_polygon(num_points=20)
+num_points = 15
+polygon = random_polygon(num_points=15)
 polygon.reverse()
 i = 0
 f = open("input.txt", "w")

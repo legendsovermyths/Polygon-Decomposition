@@ -12,7 +12,8 @@ class MP1
 public:
     int st = 0;
     vector<Vertex *> L;
+    vector<HalfEdge *> addedEdges;
     bool primeMP1(DCEL *polygon);
-    bool merge();
+    void merge(DCEL *polygon);
 };
 #endif

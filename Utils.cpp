@@ -11,7 +11,7 @@ vector<Vertex *> getAllNotches(Face *f)
     HalfEdge *t = h->next;
     while (h != t)
     {
-        if (orient(t->prev->v, t->v, t->next->v) == 0)
+        if (orient(t->next->v, t->v, t->prev->v) == 0)
             v.push_back(t->v);
         t = t->next;
     }

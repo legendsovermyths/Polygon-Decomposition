@@ -17,7 +17,7 @@ def plot_polygon(polygon, out_file_name, label):
     for i, (x, y) in enumerate(polygon):
         l = ""
         if (label == 0):
-            l = str(i)
+            l = str((len(polygon)-i) % len(polygon))
         plt.text(x, y, l, horizontalalignment="center",
                  verticalalignment="center")
 

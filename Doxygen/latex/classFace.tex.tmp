@@ -1,0 +1,27 @@
+\hypertarget{classFace}{}\doxysection{Face Class Reference}
+\label{classFace}\index{Face@{Face}}
+
+
+Collaboration diagram for Face\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFace_acef1efb6a96565c1dd4a5c00f3d1fc91}\label{classFace_acef1efb6a96565c1dd4a5c00f3d1fc91}} 
+{\bfseries Face} (int n)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFace_a59e25df6ddffe19b386a85fbc7707ce9}\label{classFace_a59e25df6ddffe19b386a85fbc7707ce9}} 
+\mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$ {\bfseries he}
+\item 
+\mbox{\Hypertarget{classFace_afc24894bb86996e7238be7031e4873ac}\label{classFace_afc24894bb86996e7238be7031e4873ac}} 
+int {\bfseries id}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+DCEL.\+hpp\item 
+DCEL.\+cpp\end{DoxyCompactItemize}

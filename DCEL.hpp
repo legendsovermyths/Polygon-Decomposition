@@ -2,6 +2,7 @@
 #define DCEL_HPP
 #include <iostream>
 #include <vector>
+#include <set>
 using namespace std;
 
 class Face;
@@ -34,6 +35,10 @@ public:
     pair<HalfEdge *, HalfEdge *> edge;
     Edge(HalfEdge *a, HalfEdge *b);
 };
+
+/*!@brief Doubly connected edge list is a  data structure
+ *
+ */
 class DCEL
 {
 public:
@@ -42,8 +47,8 @@ public:
     vector<Face *> faces;
     int faceID = 2;
     int vertexID = 0;
-    void addEdge(Vertex *&v1, Vertex *&v2, Face *&currFace);
-    void removeEdge();
+    HalfEdge *addEdge(Vertex *&v1, Vertex *&v2, Face *&currFace);
+    void removeEdge(HalfEdge *&h);
     void addVertex(double x, double y);
     void addFace(int id);
     void createPolygon(char *file);

@@ -16,7 +16,7 @@ DCEL::DCEL()
     faces.push_back(new Face(0));
 }
 
-void DCEL::addEdge(Vertex *&v1, Vertex *&v2, Face *&currFace)
+HalfEdge *DCEL::addEdge(Vertex *&v1, Vertex *&v2, Face *&currFace)
 {
     int fid = currFace->id;
     HalfEdge *fromV1 = new HalfEdge();
@@ -73,11 +73,39 @@ void DCEL::addEdge(Vertex *&v1, Vertex *&v2, Face *&currFace)
         temp = temp->next;
     }
     faces.push_back(face);
+    return fromV1;
     // TODO: implement joining  logic
 }
-void DCEL::removeEdge()
+void DCEL::removeEdge(HalfEdge *&h)
 {
-    // TODO
+    HalfEdge *t = h->twin;
+    HalfEdge *h1_prev = h->prev;
+    HalfEdge *h1_next = t->next;
+    HalfEdge *h2_prev = t->prev;
+    HalfEdge *h2_next = h->next;
+    h1_prev->next = h1_next;
+    h2_prev->next = h2_next;
+    h1_next->prev = h1_prev;
+    h2_next->prev = h2_prev;
+    Face *f1 = h->f;
+    Face *f2 = t->f;
+    HalfEdge *temp = h1_next;
+    temp->f = f1;
+    temp = temp->next;
+    while (temp != h1_next)
+    {
+        temp->f = f1;
+        temp = temp->next;
+    }
+    f1->he = h1_next;
+    free(h);
+    vector<Face *> f;
+    for (int i = 0; i < faces.size(); i++)
+    {
+        if (faces[i] != f2)
+            f.push_back(faces[i]);
+    }
+    faces = f;
 }
 void DCEL::addVertex(double x, double y)
 {
@@ -178,12 +206,11 @@ DCEL::~DCEL()
 //     DCEL *dcel = new DCEL();
 //     char in[] = "input.txt";
 //     dcel->createPolygon(in);
-//     dcel->addEdge(dcel->vertices[0], dcel->vertices[3], dcel->faces[1]);
+//     HalfEdge *h = dcel->addEdge(dcel->vertices[0], dcel->vertices[3], dcel->faces[1]);
+//     dcel->print_();
+//     dcel->removeEdge(h);
 //     dcel->print_();
 //     cout << '\n';
-//     dcel->addEdge(dcel->vertices[5], dcel->vertices[19], dcel->faces[1]);
+//     dcel->addEdge(dcel->vertices[0], dcel->vertices[8], dcel->faces[3]);
 //     dcel->print_();
-//     // cout << '\n';
-//     // dcel->addEdge(dcel->vertices[0], dcel->vertices[8], dcel->faces[3]);
-//     // dcel->print_();
 // }

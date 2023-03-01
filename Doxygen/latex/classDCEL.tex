@@ -1,0 +1,62 @@
+\hypertarget{classDCEL}{}\doxysection{DCEL Class Reference}
+\label{classDCEL}\index{DCEL@{DCEL}}
+
+
+Doubly connected edge list is a data structure.  
+
+
+
+
+{\ttfamily \#include $<$DCEL.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDCEL_a8994c0373b1d48b78a73615d2e108432}\label{classDCEL_a8994c0373b1d48b78a73615d2e108432}} 
+\mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$ {\bfseries add\+Edge} (\mbox{\hyperlink{classVertex}{Vertex}} $\ast$\&v1, \mbox{\hyperlink{classVertex}{Vertex}} $\ast$\&v2, \mbox{\hyperlink{classFace}{Face}} $\ast$\&curr\+Face)
+\item 
+\mbox{\Hypertarget{classDCEL_aec3ba67e24735cb104ffb799e0cdb84c}\label{classDCEL_aec3ba67e24735cb104ffb799e0cdb84c}} 
+void {\bfseries remove\+Edge} (\mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$\&h)
+\item 
+\mbox{\Hypertarget{classDCEL_a7f96774fe581ce15f1fc11113b129dc4}\label{classDCEL_a7f96774fe581ce15f1fc11113b129dc4}} 
+void {\bfseries add\+Vertex} (double x, double y)
+\item 
+\mbox{\Hypertarget{classDCEL_aab9f40a960099fd5a1719d2c40c3b397}\label{classDCEL_aab9f40a960099fd5a1719d2c40c3b397}} 
+void {\bfseries add\+Face} (int id)
+\item 
+\mbox{\Hypertarget{classDCEL_a4334dbf4bbedce2d327f2f4fb88da697}\label{classDCEL_a4334dbf4bbedce2d327f2f4fb88da697}} 
+void {\bfseries create\+Polygon} (char $\ast$file)
+\item 
+\mbox{\Hypertarget{classDCEL_aba8612f5d73036f4cd8fed45811a33cc}\label{classDCEL_aba8612f5d73036f4cd8fed45811a33cc}} 
+void {\bfseries output\+Polygon} (char $\ast$file)
+\item 
+\mbox{\Hypertarget{classDCEL_a3b6dd77165405b3e8173da850b2f6c26}\label{classDCEL_a3b6dd77165405b3e8173da850b2f6c26}} 
+void {\bfseries print\+\_\+} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDCEL_a6339be2488749b653dc02bab4c1e5655}\label{classDCEL_a6339be2488749b653dc02bab4c1e5655}} 
+vector$<$ \mbox{\hyperlink{classVertex}{Vertex}} $\ast$ $>$ {\bfseries vertices}
+\item 
+\mbox{\Hypertarget{classDCEL_a36c4fc41ad86cc665a1a4001188c8e38}\label{classDCEL_a36c4fc41ad86cc665a1a4001188c8e38}} 
+vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $\ast$ $>$ {\bfseries edges}
+\item 
+\mbox{\Hypertarget{classDCEL_a0dfce903b2956a78c6aa143a2226365f}\label{classDCEL_a0dfce903b2956a78c6aa143a2226365f}} 
+vector$<$ \mbox{\hyperlink{classFace}{Face}} $\ast$ $>$ {\bfseries faces}
+\item 
+\mbox{\Hypertarget{classDCEL_afce545f69785fd15733404e8ff1cbb70}\label{classDCEL_afce545f69785fd15733404e8ff1cbb70}} 
+int {\bfseries face\+ID} = 2
+\item 
+\mbox{\Hypertarget{classDCEL_a4211300d71e521b8877c55dbbc5c2b26}\label{classDCEL_a4211300d71e521b8877c55dbbc5c2b26}} 
+int {\bfseries vertex\+ID} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Doubly connected edge list is a data structure. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+DCEL.\+hpp\item 
+DCEL.\+cpp\end{DoxyCompactItemize}

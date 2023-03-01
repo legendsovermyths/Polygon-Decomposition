@@ -1,7 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <cstdlib>
-#include <time.h>
 #include "DCEL.hpp"
 #include "MP1.hpp"
 #include "Rectangle.hpp"
@@ -13,10 +11,13 @@ int main()
     char in[] = "input.txt";
     dcel->createPolygon(in);
     MP1 *mp1 = new MP1;
-    int k = 100;
-    while (k--)
+    int k1 = 100, k2 = 2;
+    while (k1--)
         mp1->primeMP1(dcel);
     ;
+    while (k2--)
+        mp1->merge(dcel);
+
     // dcel->print_();
     char out[] = "output.txt";
     dcel->outputPolygon(out);

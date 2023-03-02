@@ -1,20 +1,18 @@
 #ifndef MP1_HPP // include guard
 #define MP1_HPP
-#include <iostream>
-#include <vector>
-#include <cstdlib>
-#include <time.h>
 #include "DCEL.hpp"
 #include "Rectangle.hpp"
+#include <cstdlib>
+#include <iostream>
+#include <time.h>
+#include <vector>
 #define EXTERNAL_FACE 0
 #define WORKING_FACE 1
 
-
 ///@brief Algorithm to decompose a simple polygon into a number of convex polygons.
 ///@note description
-class MP1
-{
-public:
+class MP1 {
+  public:
     ///@brief
     int st = 0;
 
@@ -38,7 +36,7 @@ public:
     ///       It decomposes the input polygon into a number of separate convex polygons.
     bool primeMP1();
 
-    ///@brief This function merges the separate convex polygons obtained from MP1 by removing the inessential, 
+    ///@brief This function merges the separate convex polygons obtained from MP1 by removing the inessential,
     ///       duplicated diagonal edges.
     void merge();
 };

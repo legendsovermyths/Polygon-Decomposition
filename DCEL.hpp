@@ -20,7 +20,7 @@ class Vertex {
     double y;
 };
 
-/// @brief Represents a directed edge in a 3D mesh.
+/// @brief Represents a directed edge in a polygon.
 ///
 /// A HalfEdge stores information about one half of an edge in the polygon. Each
 /// edge in the polygon is represented by two HalfEdge objects, one for each
@@ -48,18 +48,37 @@ class HalfEdge {
     HalfEdge *prev;
 };
 
+/// @brief This class represents a Face object in the DCEL data structure.
+///
+/// It contains a HalfEdge pointer pointing to one of the HalfEdge objects in the Face.
+/// Additionally, it has an id attribute to uniquely identify each Face object.
+///
 class Face {
   public:
+    /// Pointer to the HalfEdge object in the Face.
     HalfEdge *he;
+    /// Unique identifier for the Face object.
     int id;
-    Face(int n);
+    /// @brief Constructor for the Face class.
+    /// @param n The unique identifier for the Face object.
+    Face(int n); 
 };
 
+/// @brief Represents an edge in the DCEL data structure as a pair of half edges.
+///
+/// An edge is defined as the line segment between two vertices in the polygon. It is represented by two HalfEdge objects
+/// in the DCEL data structure, with one HalfEdge representing each directed end of the edge. The pair of HalfEdge objects
+/// are stored as a pair in the edge member variable of the Edge class.
 class Edge {
-  public:
-    pair<HalfEdge *, HalfEdge *> edge;
-    Edge(HalfEdge *a, HalfEdge *b);
-};
+public:
+  ///< A pair of HalfEdge objects representing the two directed ends of the edge.
+  pair<HalfEdge *, HalfEdge *> edge;
+  /// @brief Constructs an Edge object with the specified HalfEdge objects representing the two ends of the edge.
+  /// @param a The HalfEdge object representing one end of the edge.
+  /// @param b The HalfEdge object representing the other end of the edge.
+  Edge(HalfEdge *a, HalfEdge *b);
+}
+;
 
 /// @brief A data structure that represents a planar subdivision of a 2D surface.
 ///
@@ -68,13 +87,12 @@ class Edge {
 /// Specifically, each vertex stores a pointer to an incident edge, each edge stores pointers to its incident vertices, its twin edge (if any),
 /// and the face on its right side, and each face stores a pointer to an incident edge on its boundary.
 /// @note DCEL is often used in computational geometry algorithms, such as computing Voronoi diagrams and Delaunay triangulations.
-
 class DCEL {
   public:
     /// @brief vector of Vertex objects containing all vertices in the polygon
     vector<Vertex *> vertices;
 
-    /// @brief vector of Edge objects containing all edges in the polygon
+    /// @brief vector of Edge objects containing all edges in the pollygon
     vector<Edge *> edges;
 
     /// @brief vector of Face objects containing all the faces iin the decomposed polygon
@@ -121,9 +139,30 @@ class DCEL {
     ///
     /// @param file The path to the input file containing the polygon data.
     void createPolygon(char *file);
+
+    /// @brief Writes the x and y coordinates of all vertices in each decomposed polygon to a file.
+    ///
+    /// This function writes the x and y coordinates of all vertices in each decomposed polygon to the
+    /// specified output file. Each polygon is separated by the '$' symbol on a new line.
+    ///
+    /// @param file The path to the output file to which the polygon data will be written.
+
     void outputPolygon(char *file);
+
+    /// @brief Default constructor for the DCEL class.
+    ///
+    /// This constructor initializes an empty DCEL data structure with no vertices, edges, or faces.
     DCEL();
+
+    /// @brief Destructor for the DCEL class.
+    ///
+    /// This destructor frees the memory used by the DCEL data structure, including all vertices, edges, and faces.
     ~DCEL();
+
+    /// @brief Prints DCEL to the console
+    ///
+    /// Prints the indices of the decomposed polygons face-wise
+    ///
     void print_();
 };
 #endif

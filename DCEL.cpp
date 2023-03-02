@@ -1,7 +1,7 @@
 #include "DCEL.hpp"
 
-/// @brief 
-/// @param n 
+/// @brief
+/// @param n
 Face::Face(int n) {
     id = n;
 }

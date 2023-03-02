@@ -1,0 +1,79 @@
+\hypertarget{_d_c_e_l_8hpp_source}{}\doxysection{DCEL.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DCEL\_HPP\ }\textcolor{comment}{//\ include\ guard}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DCEL\_HPP}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_face}{Face}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_vertex}{Vertex}}\ \{}
+\DoxyCodeLine{00017\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ index;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{double}\ x;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{double}\ y;}
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_half_edge}{HalfEdge}}\ \{}
+\DoxyCodeLine{00031\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *\mbox{\hyperlink{class_half_edge_ac239343aea2159d5958fc9eac51389d4}{v}};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_face}{Face}}\ *\mbox{\hyperlink{class_half_edge_a54d9f243ea78bec79dcf983b81447fa1}{f}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_half_edge}{HalfEdge}}\ *\mbox{\hyperlink{class_half_edge_a37e7696a7131767a0c76e45ed69be4c5}{twin}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_half_edge}{HalfEdge}}\ *\mbox{\hyperlink{class_half_edge_a5918db069bb8b4a89e471c01a14fc6e1}{next}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_half_edge}{HalfEdge}}\ *\mbox{\hyperlink{class_half_edge_a02bbf630ad01fd4d7bf4af38e286844e}{prev}};}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_face}{Face}}\ \{}
+\DoxyCodeLine{00057\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_half_edge}{HalfEdge}}\ *\mbox{\hyperlink{class_face_a59e25df6ddffe19b386a85fbc7707ce9}{he}};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_face_afc24894bb86996e7238be7031e4873ac}{id}};}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_face}{Face}}(\textcolor{keywordtype}{int}\ n);\ }
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_edge}{Edge}}\ \{}
+\DoxyCodeLine{00073\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00075\ \ \ pair<HalfEdge\ *,\ HalfEdge\ *>\ \mbox{\hyperlink{class_edge_a768fac1fbb86dba870c4e2317d8471b5}{edge}};}
+\DoxyCodeLine{00079\ \ \ \mbox{\hyperlink{class_edge}{Edge}}(\mbox{\hyperlink{class_half_edge}{HalfEdge}}\ *a,\ \mbox{\hyperlink{class_half_edge}{HalfEdge}}\ *b);}
+\DoxyCodeLine{00080\ \}}
+\DoxyCodeLine{00081\ ;}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00090\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_d_c_e_l}{DCEL}}\ \{}
+\DoxyCodeLine{00091\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00093\ \ \ \ \ vector<Vertex\ *>\ \mbox{\hyperlink{class_d_c_e_l_a6339be2488749b653dc02bab4c1e5655}{vertices}};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00096\ \ \ \ \ vector<Edge\ *>\ \mbox{\hyperlink{class_d_c_e_l_a36c4fc41ad86cc665a1a4001188c8e38}{edges}};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00099\ \ \ \ \ vector<Face\ *>\ \mbox{\hyperlink{class_d_c_e_l_a0dfce903b2956a78c6aa143a2226365f}{faces}};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{int}\ faceID\ =\ 2;}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{int}\ vertexID\ =\ 0;}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{class_half_edge}{HalfEdge}}\ *\mbox{\hyperlink{class_d_c_e_l_a8994c0373b1d48b78a73615d2e108432}{addEdge}}(\mbox{\hyperlink{class_vertex}{Vertex}}\ *\&v1,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ *\&v2,\ \mbox{\hyperlink{class_face}{Face}}\ *\&currFace);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_d_c_e_l_aec3ba67e24735cb104ffb799e0cdb84c}{removeEdge}}(\mbox{\hyperlink{class_half_edge}{HalfEdge}}\ *\&h);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_d_c_e_l_a7f96774fe581ce15f1fc11113b129dc4}{addVertex}}(\textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_d_c_e_l_aab9f40a960099fd5a1719d2c40c3b397}{addFace}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_d_c_e_l_a4334dbf4bbedce2d327f2f4fb88da697}{createPolygon}}(\textcolor{keywordtype}{char}\ *file);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_d_c_e_l_aba8612f5d73036f4cd8fed45811a33cc}{outputPolygon}}(\textcolor{keywordtype}{char}\ *file);}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00155\ \ \ \ \ \mbox{\hyperlink{class_d_c_e_l_a5f12fccd0a8f0cd3450a21e9a2fafbd8}{DCEL}}();}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00160\ \ \ \ \ \mbox{\hyperlink{class_d_c_e_l_ae0b6558a9490df6e8ec0eb1a0fffbec8}{\string~DCEL}}();}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_d_c_e_l_a3b6dd77165405b3e8173da850b2f6c26}{print\_}}();}
+\DoxyCodeLine{00167\ \};}
+\DoxyCodeLine{00168\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

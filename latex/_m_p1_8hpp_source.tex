@@ -1,0 +1,37 @@
+\hypertarget{_m_p1_8hpp_source}{}\doxysection{MP1.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MP1\_HPP\ }\textcolor{comment}{//\ include\ guard}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MP1\_HPP}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}DCEL.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Rectangle.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ EXTERNAL\_FACE\ 0}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ WORKING\_FACE\ 1}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_m_p1}{MP1}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ st\ =\ 0;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_d_c_e_l}{DCEL}}\ *\mbox{\hyperlink{class_m_p1_a2da99292b94f8398846dc013a25218b3}{polygon}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ vector<Vertex\ *>\ \mbox{\hyperlink{class_m_p1_aef7407e8e3ebf62a716959e35b514ec4}{L}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ vector<HalfEdge\ *>\ \mbox{\hyperlink{class_m_p1_aed5530e8f23e632b2f0c36bca032fe42}{addedEdges}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \ \ vector<Vertex\ *>\ \mbox{\hyperlink{class_m_p1_a4331ffdec6e9a0133fa40110caf1d808}{notches}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_m_p1}{MP1}}(\mbox{\hyperlink{class_d_c_e_l}{DCEL}}\ *\&dcel);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_m_p1_a91a97580147e9c43f3b697ba6ae23edb}{primeMP1}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_p1_a0959662a52206f1a9b4509e274274354}{merge}}();}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

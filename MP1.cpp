@@ -2,6 +2,8 @@
 #include "Utils.hpp"
 #include "DCEL.hpp"
 
+///@brief Finds all notches and prints them.
+///@param dcel Input polygon as a doubly connected edge list
 MP1::MP1(DCEL *&dcel)
 {
     notches = getAllNotches(dcel->faces[EXTERNAL_FACE]);
@@ -12,6 +14,9 @@ MP1::MP1(DCEL *&dcel)
     }
     cout << '\n';
 }
+
+///@brief Main MP1 algorithm to decompose input polygon
+///@return 1 if polygon has only 1 edge, 0 otherwise
 bool MP1::primeMP1()
 {
     L.clear();
@@ -102,6 +107,8 @@ bool MP1::primeMP1()
     return 0;
 }
 
+///@brief Merging algorithm to remove inessential diagonals
+///@return void
 void MP1::merge()
 {
     vector<HalfEdge *> e;

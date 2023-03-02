@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['index_6',['index',['../classVertex.html#a2e35f7521dfd3fdee65dc26879c62f24',1,'Vertex']]]
+  ['halfedge_12',['HalfEdge',['../classHalfEdge.html',1,'']]],
+  ['he_13',['he',['../classFace.html#a59e25df6ddffe19b386a85fbc7707ce9',1,'Face']]]
 ];

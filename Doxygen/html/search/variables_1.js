@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['index_29',['index',['../classVertex.html#a2e35f7521dfd3fdee65dc26879c62f24',1,'Vertex']]]
+  ['edge_61',['edge',['../classEdge.html#a768fac1fbb86dba870c4e2317d8471b5',1,'Edge']]],
+  ['edges_62',['edges',['../classDCEL.html#a36c4fc41ad86cc665a1a4001188c8e38',1,'DCEL']]]
 ];

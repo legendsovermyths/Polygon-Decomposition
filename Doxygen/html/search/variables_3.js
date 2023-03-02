@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['prev_31',['prev',['../classHalfEdge.html#a02bbf630ad01fd4d7bf4af38e286844e',1,'HalfEdge']]]
+  ['he_65',['he',['../classFace.html#a59e25df6ddffe19b386a85fbc7707ce9',1,'Face']]]
 ];

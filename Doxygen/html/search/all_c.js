@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x_15',['x',['../classVertex.html#af2602132c3297d81bc9f8ee54867445b',1,'Vertex']]]
+  ['rectangle_29',['Rectangle',['../classRectangle.html',1,'']]],
+  ['removeedge_30',['removeEdge',['../classDCEL.html#aec3ba67e24735cb104ffb799e0cdb84c',1,'DCEL']]]
 ];

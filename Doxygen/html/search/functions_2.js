@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['edge_27',['Edge',['../classEdge.html#abe687ff234414588c42211e047292171',1,'Edge']]]
+  ['dcel_50',['DCEL',['../classDCEL.html#a5f12fccd0a8f0cd3450a21e9a2fafbd8',1,'DCEL']]]
 ];

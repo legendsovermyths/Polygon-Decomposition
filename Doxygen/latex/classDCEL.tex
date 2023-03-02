@@ -1,43 +1,47 @@
 \hypertarget{classDCEL}{}\doxysection{DCEL Class Reference}
 \label{classDCEL}\index{DCEL@{DCEL}}
+
+
+A data structure that represents a planar subdivision of a 2D surface.  
+
+
+
+
+{\ttfamily \#include $<$DCEL.\+hpp$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$ \mbox{\hyperlink{classDCEL_a8994c0373b1d48b78a73615d2e108432}{add\+Edge}} (\mbox{\hyperlink{classVertex}{Vertex}} $\ast$\&v1, \mbox{\hyperlink{classVertex}{Vertex}} $\ast$\&v2, \mbox{\hyperlink{classFace}{Face}} $\ast$\&curr\+Face)
-\begin{DoxyCompactList}\small\item\em adds edge between two vertices present in a face. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classDCEL_aec3ba67e24735cb104ffb799e0cdb84c}\label{classDCEL_aec3ba67e24735cb104ffb799e0cdb84c}} 
-void {\bfseries remove\+Edge} (\mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$\&h)
-\item 
-\mbox{\Hypertarget{classDCEL_a7f96774fe581ce15f1fc11113b129dc4}\label{classDCEL_a7f96774fe581ce15f1fc11113b129dc4}} 
-void {\bfseries add\+Vertex} (double x, double y)
-\item 
-\mbox{\Hypertarget{classDCEL_aab9f40a960099fd5a1719d2c40c3b397}\label{classDCEL_aab9f40a960099fd5a1719d2c40c3b397}} 
-void {\bfseries add\+Face} (int id)
-\item 
-\mbox{\Hypertarget{classDCEL_a4334dbf4bbedce2d327f2f4fb88da697}\label{classDCEL_a4334dbf4bbedce2d327f2f4fb88da697}} 
-void {\bfseries create\+Polygon} (char $\ast$file)
-\item 
-\mbox{\Hypertarget{classDCEL_aba8612f5d73036f4cd8fed45811a33cc}\label{classDCEL_aba8612f5d73036f4cd8fed45811a33cc}} 
-void {\bfseries output\+Polygon} (char $\ast$file)
-\item 
-\mbox{\Hypertarget{classDCEL_a5f12fccd0a8f0cd3450a21e9a2fafbd8}\label{classDCEL_a5f12fccd0a8f0cd3450a21e9a2fafbd8}} 
+\begin{DoxyCompactList}\small\item\em Adds a new edge between two vertices in a face, splitting the face into two. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDCEL_aec3ba67e24735cb104ffb799e0cdb84c}{remove\+Edge}} (\mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$\&h)
+\begin{DoxyCompactList}\small\item\em Removes the half-\/edge h. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDCEL_a7f96774fe581ce15f1fc11113b129dc4}{add\+Vertex}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Adds a new vertex to the vector of vertices with the specified coordinates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDCEL_aab9f40a960099fd5a1719d2c40c3b397}{add\+Face}} (int id)
+\begin{DoxyCompactList}\small\item\em Adds a new face to the vector of faces with the specified ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDCEL_a4334dbf4bbedce2d327f2f4fb88da697}{create\+Polygon}} (char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Creates a polygon from an input file with {\ttfamily n+1} lines, where {\ttfamily n} is the number of vertices in the polygon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDCEL_aba8612f5d73036f4cd8fed45811a33cc}{output\+Polygon}} (char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Writes the x and y coordinates of all vertices in each decomposed polygon to a file. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classDCEL_a5f12fccd0a8f0cd3450a21e9a2fafbd8}{DCEL}} ()
-\begin{DoxyCompactList}\small\item\em initialzes the \mbox{\hyperlink{classDCEL}{DCEL}} to connect one exterior face \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classDCEL_a3b6dd77165405b3e8173da850b2f6c26}\label{classDCEL_a3b6dd77165405b3e8173da850b2f6c26}} 
-void {\bfseries print\+\_\+} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{classDCEL}{DCEL}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDCEL_ae0b6558a9490df6e8ec0eb1a0fffbec8}{$\sim$\+DCEL}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classDCEL}{DCEL}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDCEL_a3b6dd77165405b3e8173da850b2f6c26}{print\+\_\+}} ()
+\begin{DoxyCompactList}\small\item\em Prints \mbox{\hyperlink{classDCEL}{DCEL}} to the console. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classDCEL_a6339be2488749b653dc02bab4c1e5655}\label{classDCEL_a6339be2488749b653dc02bab4c1e5655}} 
-vector$<$ \mbox{\hyperlink{classVertex}{Vertex}} $\ast$ $>$ {\bfseries vertices}
-\item 
+vector$<$ \mbox{\hyperlink{classVertex}{Vertex}} $\ast$ $>$ \mbox{\hyperlink{classDCEL_a6339be2488749b653dc02bab4c1e5655}{vertices}}
+\begin{DoxyCompactList}\small\item\em vector of \mbox{\hyperlink{classVertex}{Vertex}} objects containing all vertices in the polygon \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classDCEL_a36c4fc41ad86cc665a1a4001188c8e38}\label{classDCEL_a36c4fc41ad86cc665a1a4001188c8e38}} 
-vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $\ast$ $>$ {\bfseries edges}
-\item 
+vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $\ast$ $>$ \mbox{\hyperlink{classDCEL_a36c4fc41ad86cc665a1a4001188c8e38}{edges}}
+\begin{DoxyCompactList}\small\item\em vector of \mbox{\hyperlink{classEdge}{Edge}} objects containing all edges in the pollygon \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classDCEL_a0dfce903b2956a78c6aa143a2226365f}\label{classDCEL_a0dfce903b2956a78c6aa143a2226365f}} 
-vector$<$ \mbox{\hyperlink{classFace}{Face}} $\ast$ $>$ {\bfseries faces}
-\item 
+vector$<$ \mbox{\hyperlink{classFace}{Face}} $\ast$ $>$ \mbox{\hyperlink{classDCEL_a0dfce903b2956a78c6aa143a2226365f}{faces}}
+\begin{DoxyCompactList}\small\item\em vector of \mbox{\hyperlink{classFace}{Face}} objects containing all the faces iin the decomposed polygon \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classDCEL_afce545f69785fd15733404e8ff1cbb70}\label{classDCEL_afce545f69785fd15733404e8ff1cbb70}} 
 int {\bfseries face\+ID} = 2
 \item 
@@ -45,6 +49,43 @@ int {\bfseries face\+ID} = 2
 int {\bfseries vertex\+ID} = 0
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A data structure that represents a planar subdivision of a 2D surface. 
+
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{classDCEL}{DCEL}} (Doubly Connected \mbox{\hyperlink{classEdge}{Edge}} List) is a data structure commonly used to represent planar subdivisions of a 2D surface. 
+
+It stores information about the vertices, edges, and faces of the subdivision, along with their relationships to one another. Specifically, each vertex stores a pointer to an incident edge, each edge stores pointers to its incident vertices, its twin edge (if any), and the face on its right side, and each face stores a pointer to an incident edge on its boundary. 
+
+\mbox{\hyperlink{classDCEL}{DCEL}} is often used in computational geometry algorithms, such as computing Voronoi diagrams and Delaunay triangulations. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDCEL_a5f12fccd0a8f0cd3450a21e9a2fafbd8}\label{classDCEL_a5f12fccd0a8f0cd3450a21e9a2fafbd8}} 
+\index{DCEL@{DCEL}!DCEL@{DCEL}}
+\index{DCEL@{DCEL}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{DCEL()}{DCEL()}}
+{\footnotesize\ttfamily DCEL\+::\+DCEL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \mbox{\hyperlink{classDCEL}{DCEL}} class. 
+
+initialzes the \mbox{\hyperlink{classDCEL}{DCEL}} to connect one exterior face
+
+This constructor initializes an empty \mbox{\hyperlink{classDCEL}{DCEL}} data structure with no vertices, edges, or faces. \mbox{\Hypertarget{classDCEL_ae0b6558a9490df6e8ec0eb1a0fffbec8}\label{classDCEL_ae0b6558a9490df6e8ec0eb1a0fffbec8}} 
+\index{DCEL@{DCEL}!````~DCEL@{$\sim$DCEL}}
+\index{````~DCEL@{$\sim$DCEL}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{$\sim$DCEL()}{~DCEL()}}
+{\footnotesize\ttfamily DCEL\+::$\sim$\+DCEL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for the \mbox{\hyperlink{classDCEL}{DCEL}} class. 
+
+This destructor frees the memory used by the \mbox{\hyperlink{classDCEL}{DCEL}} data structure, including all vertices, edges, and faces. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classDCEL_a8994c0373b1d48b78a73615d2e108432}\label{classDCEL_a8994c0373b1d48b78a73615d2e108432}} 
@@ -55,8 +96,24 @@ int {\bfseries vertex\+ID} = 0
 
 
 
-adds edge between two vertices present in a face. 
+Adds a new edge between two vertices in a face, splitting the face into two. 
 
+adds edge between two vertices present in a face.
+
+This function creates a new edge between two existing vertices in a given face and splits the face into two new faces. The new edge is returned, and its twin edge is also created and returned. The new edge starts at {\ttfamily v1} and ends at {\ttfamily v2}. The {\ttfamily curr\+Face} parameter specifies the face that needs to be split by the added edge.
+
+
+\begin{DoxyParams}{Parameters}
+{\em v1} & The starting vertex of the new edge. \\
+\hline
+{\em v2} & The ending vertex of the new edge. \\
+\hline
+{\em curr\+Face} & The face that needs to be split by the added edge. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classHalfEdge}{Half\+Edge}} starting at {\ttfamily v1} in the new edge.
+\end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
 {\em v1} & \mbox{\hyperlink{classVertex}{Vertex}} from which the edge has to made and returned. \\
@@ -69,6 +126,107 @@ adds edge between two vertices present in a face.
 \begin{DoxyReturn}{Returns}
 The \mbox{\hyperlink{classHalfEdge}{Half\+Edge}} from v1. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classDCEL_aab9f40a960099fd5a1719d2c40c3b397}\label{classDCEL_aab9f40a960099fd5a1719d2c40c3b397}} 
+\index{DCEL@{DCEL}!addFace@{addFace}}
+\index{addFace@{addFace}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{addFace()}{addFace()}}
+{\footnotesize\ttfamily void DCEL\+::add\+Face (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Adds a new face to the vector of faces with the specified ID. 
+
+This function creates a new face with the specified {\ttfamily id} and adds it to the vector of faces.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the new face. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDCEL_a7f96774fe581ce15f1fc11113b129dc4}\label{classDCEL_a7f96774fe581ce15f1fc11113b129dc4}} 
+\index{DCEL@{DCEL}!addVertex@{addVertex}}
+\index{addVertex@{addVertex}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{addVertex()}{addVertex()}}
+{\footnotesize\ttfamily void DCEL\+::add\+Vertex (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+Adds a new vertex to the vector of vertices with the specified coordinates. 
+
+This function creates a new vertex with the specified {\ttfamily x} and {\ttfamily y} coordinates and adds it to the vector of vertices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the new vertex. \\
+\hline
+{\em y} & The y-\/coordinate of the new vertex.\\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDCEL_a4334dbf4bbedce2d327f2f4fb88da697}\label{classDCEL_a4334dbf4bbedce2d327f2f4fb88da697}} 
+\index{DCEL@{DCEL}!createPolygon@{createPolygon}}
+\index{createPolygon@{createPolygon}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{createPolygon()}{createPolygon()}}
+{\footnotesize\ttfamily void DCEL\+::create\+Polygon (\begin{DoxyParamCaption}\item[{char $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Creates a polygon from an input file with {\ttfamily n+1} lines, where {\ttfamily n} is the number of vertices in the polygon. 
+
+This function reads an input file containing {\ttfamily n+1} lines, where {\ttfamily n} is the number of vertices in the polygon. The first line specifies the number of vertices {\ttfamily n}, while the next {\ttfamily n} lines contain two doubles, representing the x and y coordinates of each vertex.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The path to the input file containing the polygon data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDCEL_aba8612f5d73036f4cd8fed45811a33cc}\label{classDCEL_aba8612f5d73036f4cd8fed45811a33cc}} 
+\index{DCEL@{DCEL}!outputPolygon@{outputPolygon}}
+\index{outputPolygon@{outputPolygon}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{outputPolygon()}{outputPolygon()}}
+{\footnotesize\ttfamily void DCEL\+::output\+Polygon (\begin{DoxyParamCaption}\item[{char $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Writes the x and y coordinates of all vertices in each decomposed polygon to a file. 
+
+This function writes the x and y coordinates of all vertices in each decomposed polygon to the specified output file. Each polygon is separated by the \textquotesingle{}\$\textquotesingle{} symbol on a new line.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The path to the output file to which the polygon data will be written. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDCEL_a3b6dd77165405b3e8173da850b2f6c26}\label{classDCEL_a3b6dd77165405b3e8173da850b2f6c26}} 
+\index{DCEL@{DCEL}!print\_@{print\_}}
+\index{print\_@{print\_}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{print\_()}{print\_()}}
+{\footnotesize\ttfamily void DCEL\+::print\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints \mbox{\hyperlink{classDCEL}{DCEL}} to the console. 
+
+Prints the indices of the decomposed polygons face-\/wise \mbox{\Hypertarget{classDCEL_aec3ba67e24735cb104ffb799e0cdb84c}\label{classDCEL_aec3ba67e24735cb104ffb799e0cdb84c}} 
+\index{DCEL@{DCEL}!removeEdge@{removeEdge}}
+\index{removeEdge@{removeEdge}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{removeEdge()}{removeEdge()}}
+{\footnotesize\ttfamily void DCEL\+::remove\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHalfEdge}{Half\+Edge}} $\ast$\&}]{h }\end{DoxyParamCaption})}
+
+
+
+Removes the half-\/edge h. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & The half-\/edge that has to be removed\\
+\hline
+{\em h} & \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

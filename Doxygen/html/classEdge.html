@@ -71,20 +71,29 @@ $(function() {
 <div class="title">Edge Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents an edge in the <a class="el" href="classDCEL.html" title="A data structure that represents a planar subdivision of a 2D surface.">DCEL</a> data structure as a pair of half edges.  
+ <a href="classEdge.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="DCEL_8hpp_source.html">DCEL.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abe687ff234414588c42211e047292171"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEdge.html#abe687ff234414588c42211e047292171">Edge</a> (<a class="el" href="classHalfEdge.html">HalfEdge</a> *a, <a class="el" href="classHalfEdge.html">HalfEdge</a> *b)</td></tr>
-<tr class="memdesc:abe687ff234414588c42211e047292171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize an edge to contain to halfedges.  <a href="classEdge.html#abe687ff234414588c42211e047292171">More...</a><br /></td></tr>
+<tr class="memdesc:abe687ff234414588c42211e047292171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="classEdge.html" title="Represents an edge in the DCEL data structure as a pair of half edges.">Edge</a> object with the specified <a class="el" href="classHalfEdge.html" title="Represents a directed edge in a polygon.">HalfEdge</a> objects representing the two ends of the edge.  <a href="classEdge.html#abe687ff234414588c42211e047292171">More...</a><br /></td></tr>
 <tr class="separator:abe687ff234414588c42211e047292171"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a768fac1fbb86dba870c4e2317d8471b5"><td class="memItemLeft" align="right" valign="top"><a id="a768fac1fbb86dba870c4e2317d8471b5"></a>
-pair&lt; <a class="el" href="classHalfEdge.html">HalfEdge</a> *, <a class="el" href="classHalfEdge.html">HalfEdge</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>edge</b></td></tr>
+pair&lt; <a class="el" href="classHalfEdge.html">HalfEdge</a> *, <a class="el" href="classHalfEdge.html">HalfEdge</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEdge.html#a768fac1fbb86dba870c4e2317d8471b5">edge</a></td></tr>
+<tr class="memdesc:a768fac1fbb86dba870c4e2317d8471b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; A pair of <a class="el" href="classHalfEdge.html" title="Represents a directed edge in a polygon.">HalfEdge</a> objects representing the two directed ends of the edge. <br /></td></tr>
 <tr class="separator:a768fac1fbb86dba870c4e2317d8471b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents an edge in the <a class="el" href="classDCEL.html" title="A data structure that represents a planar subdivision of a 2D surface.">DCEL</a> data structure as a pair of half edges. </p>
+<p>An edge is defined as the line segment between two vertices in the polygon. It is represented by two <a class="el" href="classHalfEdge.html" title="Represents a directed edge in a polygon.">HalfEdge</a> objects in the <a class="el" href="classDCEL.html" title="A data structure that represents a planar subdivision of a 2D surface.">DCEL</a> data structure, with one <a class="el" href="classHalfEdge.html" title="Represents a directed edge in a polygon.">HalfEdge</a> representing each directed end of the edge. The pair of <a class="el" href="classHalfEdge.html" title="Represents a directed edge in a polygon.">HalfEdge</a> objects are stored as a pair in the edge member variable of the <a class="el" href="classEdge.html" title="Represents an edge in the DCEL data structure as a pair of half edges.">Edge</a> class. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abe687ff234414588c42211e047292171"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abe687ff234414588c42211e047292171">&#9670;&nbsp;</a></span>Edge()</h2>
 
@@ -111,11 +120,14 @@ pair&lt; <a class="el" href="classHalfEdge.html">HalfEdge</a> *, <a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Initialize an edge to contain to halfedges. </p>
+<p>Constructs an <a class="el" href="classEdge.html" title="Represents an edge in the DCEL data structure as a pair of half edges.">Edge</a> object with the specified <a class="el" href="classHalfEdge.html" title="Represents a directed edge in a polygon.">HalfEdge</a> objects representing the two ends of the edge. </p>
+<p>Initialize an edge to contain two half-edges.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td></td></tr>
-    <tr><td class="paramname">b</td><td></td></tr>
+    <tr><td class="paramname">a</td><td>The <a class="el" href="classHalfEdge.html" title="Represents a directed edge in a polygon.">HalfEdge</a> object representing one end of the edge. </td></tr>
+    <tr><td class="paramname">b</td><td>The <a class="el" href="classHalfEdge.html" title="Represents a directed edge in a polygon.">HalfEdge</a> object representing the other end of the edge.</td></tr>
+    <tr><td class="paramname">a</td><td>First half-edge </td></tr>
+    <tr><td class="paramname">b</td><td>Second half-edge </td></tr>
   </table>
   </dd>
 </dl>

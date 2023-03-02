@@ -70,73 +70,93 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DCEL_HPP </span><span class="comment">// include guard</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define DCEL_HPP</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">class </span><a class="code" href="classFace.html">Face</a>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classVertex.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classVertex.html">Vertex</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classVertex.html#a2e35f7521dfd3fdee65dc26879c62f24">   14</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classVertex.html#a2e35f7521dfd3fdee65dc26879c62f24">index</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classVertex.html#af2602132c3297d81bc9f8ee54867445b">   16</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classVertex.html#af2602132c3297d81bc9f8ee54867445b">x</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classVertex.html#a7563c83da86f4a0831144bc823fec2b0">   18</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classVertex.html#a7563c83da86f4a0831144bc823fec2b0">y</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classHalfEdge.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classHalfEdge.html">HalfEdge</a></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classHalfEdge.html#ac239343aea2159d5958fc9eac51389d4">   25</a></span>&#160;    <a class="code" href="classVertex.html">Vertex</a> *<a class="code" href="classHalfEdge.html#ac239343aea2159d5958fc9eac51389d4">v</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classHalfEdge.html#a54d9f243ea78bec79dcf983b81447fa1">   27</a></span>&#160;    <a class="code" href="classFace.html">Face</a> *<a class="code" href="classHalfEdge.html#a54d9f243ea78bec79dcf983b81447fa1">f</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classHalfEdge.html#a37e7696a7131767a0c76e45ed69be4c5">   29</a></span>&#160;    <a class="code" href="classHalfEdge.html">HalfEdge</a> *<a class="code" href="classHalfEdge.html#a37e7696a7131767a0c76e45ed69be4c5">twin</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classHalfEdge.html#a5918db069bb8b4a89e471c01a14fc6e1">   31</a></span>&#160;    <a class="code" href="classHalfEdge.html">HalfEdge</a> *<a class="code" href="classHalfEdge.html#a5918db069bb8b4a89e471c01a14fc6e1">next</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classHalfEdge.html#a02bbf630ad01fd4d7bf4af38e286844e">   33</a></span>&#160;    <a class="code" href="classHalfEdge.html">HalfEdge</a> *<a class="code" href="classHalfEdge.html#a02bbf630ad01fd4d7bf4af38e286844e">prev</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classFace.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFace.html">Face</a></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classHalfEdge.html">HalfEdge</a> *he;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> id;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classFace.html">Face</a>(<span class="keywordtype">int</span> n);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classEdge.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEdge.html">Edge</a></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    pair&lt;HalfEdge *, HalfEdge *&gt; edge;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classEdge.html">Edge</a>(<a class="code" href="classHalfEdge.html">HalfEdge</a> *a, <a class="code" href="classHalfEdge.html">HalfEdge</a> *b);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classDCEL.html">   49</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDCEL.html">DCEL</a></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    vector&lt;Vertex *&gt; vertices;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    vector&lt;Edge *&gt; edges;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    vector&lt;Face *&gt; faces;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> faceID = 2;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">int</span> vertexID = 0;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classHalfEdge.html">HalfEdge</a> *addEdge(<a class="code" href="classVertex.html">Vertex</a> *&amp;v1, <a class="code" href="classVertex.html">Vertex</a> *&amp;v2, <a class="code" href="classFace.html">Face</a> *&amp;currFace);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> removeEdge(<a class="code" href="classHalfEdge.html">HalfEdge</a> *&amp;h);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> addVertex(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> addFace(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> createPolygon(<span class="keywordtype">char</span> *file);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> outputPolygon(<span class="keywordtype">char</span> *file);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classDCEL.html">DCEL</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    ~<a class="code" href="classDCEL.html">DCEL</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> print_();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassDCEL_html"><div class="ttname"><a href="classDCEL.html">DCEL</a></div><div class="ttdef"><b>Definition:</b> DCEL.hpp:50</div></div>
-<div class="ttc" id="aclassEdge_html"><div class="ttname"><a href="classEdge.html">Edge</a></div><div class="ttdef"><b>Definition:</b> DCEL.hpp:43</div></div>
-<div class="ttc" id="aclassFace_html"><div class="ttname"><a href="classFace.html">Face</a></div><div class="ttdef"><b>Definition:</b> DCEL.hpp:36</div></div>
-<div class="ttc" id="aclassHalfEdge_html"><div class="ttname"><a href="classHalfEdge.html">HalfEdge</a></div><div class="ttdoc">Represents a directed edge.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:22</div></div>
-<div class="ttc" id="aclassHalfEdge_html_a02bbf630ad01fd4d7bf4af38e286844e"><div class="ttname"><a href="classHalfEdge.html#a02bbf630ad01fd4d7bf4af38e286844e">HalfEdge::prev</a></div><div class="ttdeci">HalfEdge * prev</div><div class="ttdoc">The previous edge this edge is pointing to.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:33</div></div>
-<div class="ttc" id="aclassHalfEdge_html_a37e7696a7131767a0c76e45ed69be4c5"><div class="ttname"><a href="classHalfEdge.html#a37e7696a7131767a0c76e45ed69be4c5">HalfEdge::twin</a></div><div class="ttdeci">HalfEdge * twin</div><div class="ttdoc">The other half of the edge containing pointing to the Vertex this HalfEdge is incident on.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:29</div></div>
-<div class="ttc" id="aclassHalfEdge_html_a54d9f243ea78bec79dcf983b81447fa1"><div class="ttname"><a href="classHalfEdge.html#a54d9f243ea78bec79dcf983b81447fa1">HalfEdge::f</a></div><div class="ttdeci">Face * f</div><div class="ttdoc">Face on the right side of the directed edge.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:27</div></div>
-<div class="ttc" id="aclassHalfEdge_html_a5918db069bb8b4a89e471c01a14fc6e1"><div class="ttname"><a href="classHalfEdge.html#a5918db069bb8b4a89e471c01a14fc6e1">HalfEdge::next</a></div><div class="ttdeci">HalfEdge * next</div><div class="ttdoc">The next edge pointed by the directed edge.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:31</div></div>
-<div class="ttc" id="aclassHalfEdge_html_ac239343aea2159d5958fc9eac51389d4"><div class="ttname"><a href="classHalfEdge.html#ac239343aea2159d5958fc9eac51389d4">HalfEdge::v</a></div><div class="ttdeci">Vertex * v</div><div class="ttdoc">Vertex on which the edge is incident on.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:25</div></div>
-<div class="ttc" id="aclassVertex_html"><div class="ttname"><a href="classVertex.html">Vertex</a></div><div class="ttdoc">Represents the vertex of the polygon.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:11</div></div>
-<div class="ttc" id="aclassVertex_html_a2e35f7521dfd3fdee65dc26879c62f24"><div class="ttname"><a href="classVertex.html#a2e35f7521dfd3fdee65dc26879c62f24">Vertex::index</a></div><div class="ttdeci">int index</div><div class="ttdoc">Index of the vertex.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:14</div></div>
-<div class="ttc" id="aclassVertex_html_a7563c83da86f4a0831144bc823fec2b0"><div class="ttname"><a href="classVertex.html#a7563c83da86f4a0831144bc823fec2b0">Vertex::y</a></div><div class="ttdeci">double y</div><div class="ttdoc">y-coordinate of the vertex</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:18</div></div>
-<div class="ttc" id="aclassVertex_html_af2602132c3297d81bc9f8ee54867445b"><div class="ttname"><a href="classVertex.html#af2602132c3297d81bc9f8ee54867445b">Vertex::x</a></div><div class="ttdeci">double x</div><div class="ttdoc">x-coordinate of the vertex</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:16</div></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">class </span><a class="code" href="classFace.html">Face</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classVertex.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classVertex.html">Vertex</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> index;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">double</span> x;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">double</span> y;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classHalfEdge.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classHalfEdge.html">HalfEdge</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classHalfEdge.html#ac239343aea2159d5958fc9eac51389d4">   33</a></span>&#160;    <a class="code" href="classVertex.html">Vertex</a> *<a class="code" href="classHalfEdge.html#ac239343aea2159d5958fc9eac51389d4">v</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classHalfEdge.html#a54d9f243ea78bec79dcf983b81447fa1">   36</a></span>&#160;    <a class="code" href="classFace.html">Face</a> *<a class="code" href="classHalfEdge.html#a54d9f243ea78bec79dcf983b81447fa1">f</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classHalfEdge.html#a37e7696a7131767a0c76e45ed69be4c5">   40</a></span>&#160;    <a class="code" href="classHalfEdge.html">HalfEdge</a> *<a class="code" href="classHalfEdge.html#a37e7696a7131767a0c76e45ed69be4c5">twin</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classHalfEdge.html#a5918db069bb8b4a89e471c01a14fc6e1">   44</a></span>&#160;    <a class="code" href="classHalfEdge.html">HalfEdge</a> *<a class="code" href="classHalfEdge.html#a5918db069bb8b4a89e471c01a14fc6e1">next</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classHalfEdge.html#a02bbf630ad01fd4d7bf4af38e286844e">   48</a></span>&#160;    <a class="code" href="classHalfEdge.html">HalfEdge</a> *<a class="code" href="classHalfEdge.html#a02bbf630ad01fd4d7bf4af38e286844e">prev</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classFace.html">   56</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFace.html">Face</a> {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classFace.html#a59e25df6ddffe19b386a85fbc7707ce9">   59</a></span>&#160;    <a class="code" href="classHalfEdge.html">HalfEdge</a> *<a class="code" href="classFace.html#a59e25df6ddffe19b386a85fbc7707ce9">he</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classFace.html#afc24894bb86996e7238be7031e4873ac">   61</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classFace.html#afc24894bb86996e7238be7031e4873ac">id</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classFace.html">Face</a>(<span class="keywordtype">int</span> n); </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classEdge.html">   72</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEdge.html">Edge</a> {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classEdge.html#a768fac1fbb86dba870c4e2317d8471b5">   75</a></span>&#160;  pair&lt;HalfEdge *, HalfEdge *&gt; <a class="code" href="classEdge.html#a768fac1fbb86dba870c4e2317d8471b5">edge</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="classEdge.html">Edge</a>(<a class="code" href="classHalfEdge.html">HalfEdge</a> *a, <a class="code" href="classHalfEdge.html">HalfEdge</a> *b);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classDCEL.html">   90</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDCEL.html">DCEL</a> {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classDCEL.html#a6339be2488749b653dc02bab4c1e5655">   93</a></span>&#160;    vector&lt;Vertex *&gt; <a class="code" href="classDCEL.html#a6339be2488749b653dc02bab4c1e5655">vertices</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classDCEL.html#a36c4fc41ad86cc665a1a4001188c8e38">   96</a></span>&#160;    vector&lt;Edge *&gt; <a class="code" href="classDCEL.html#a36c4fc41ad86cc665a1a4001188c8e38">edges</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classDCEL.html#a0dfce903b2956a78c6aa143a2226365f">   99</a></span>&#160;    vector&lt;Face *&gt; <a class="code" href="classDCEL.html#a0dfce903b2956a78c6aa143a2226365f">faces</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">int</span> faceID = 2;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">int</span> vertexID = 0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="classHalfEdge.html">HalfEdge</a> *addEdge(<a class="code" href="classVertex.html">Vertex</a> *&amp;v1, <a class="code" href="classVertex.html">Vertex</a> *&amp;v2, <a class="code" href="classFace.html">Face</a> *&amp;currFace);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> removeEdge(<a class="code" href="classHalfEdge.html">HalfEdge</a> *&amp;h);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">void</span> addVertex(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">void</span> addFace(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">void</span> createPolygon(<span class="keywordtype">char</span> *file);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">void</span> outputPolygon(<span class="keywordtype">char</span> *file);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="classDCEL.html">DCEL</a>();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    ~<a class="code" href="classDCEL.html">DCEL</a>();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">void</span> print_();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;};</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassDCEL_html"><div class="ttname"><a href="classDCEL.html">DCEL</a></div><div class="ttdoc">A data structure that represents a planar subdivision of a 2D surface.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:90</div></div>
+<div class="ttc" id="aclassDCEL_html_a0dfce903b2956a78c6aa143a2226365f"><div class="ttname"><a href="classDCEL.html#a0dfce903b2956a78c6aa143a2226365f">DCEL::faces</a></div><div class="ttdeci">vector&lt; Face * &gt; faces</div><div class="ttdoc">vector of Face objects containing all the faces iin the decomposed polygon</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:99</div></div>
+<div class="ttc" id="aclassDCEL_html_a36c4fc41ad86cc665a1a4001188c8e38"><div class="ttname"><a href="classDCEL.html#a36c4fc41ad86cc665a1a4001188c8e38">DCEL::edges</a></div><div class="ttdeci">vector&lt; Edge * &gt; edges</div><div class="ttdoc">vector of Edge objects containing all edges in the pollygon</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:96</div></div>
+<div class="ttc" id="aclassDCEL_html_a6339be2488749b653dc02bab4c1e5655"><div class="ttname"><a href="classDCEL.html#a6339be2488749b653dc02bab4c1e5655">DCEL::vertices</a></div><div class="ttdeci">vector&lt; Vertex * &gt; vertices</div><div class="ttdoc">vector of Vertex objects containing all vertices in the polygon</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:93</div></div>
+<div class="ttc" id="aclassEdge_html"><div class="ttname"><a href="classEdge.html">Edge</a></div><div class="ttdoc">Represents an edge in the DCEL data structure as a pair of half edges.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:72</div></div>
+<div class="ttc" id="aclassEdge_html_a768fac1fbb86dba870c4e2317d8471b5"><div class="ttname"><a href="classEdge.html#a768fac1fbb86dba870c4e2317d8471b5">Edge::edge</a></div><div class="ttdeci">pair&lt; HalfEdge *, HalfEdge * &gt; edge</div><div class="ttdoc">&lt; A pair of HalfEdge objects representing the two directed ends of the edge.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:75</div></div>
+<div class="ttc" id="aclassFace_html"><div class="ttname"><a href="classFace.html">Face</a></div><div class="ttdoc">This class represents a Face object in the DCEL data structure.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:56</div></div>
+<div class="ttc" id="aclassFace_html_a59e25df6ddffe19b386a85fbc7707ce9"><div class="ttname"><a href="classFace.html#a59e25df6ddffe19b386a85fbc7707ce9">Face::he</a></div><div class="ttdeci">HalfEdge * he</div><div class="ttdoc">Pointer to the HalfEdge object in the Face.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:59</div></div>
+<div class="ttc" id="aclassFace_html_afc24894bb86996e7238be7031e4873ac"><div class="ttname"><a href="classFace.html#afc24894bb86996e7238be7031e4873ac">Face::id</a></div><div class="ttdeci">int id</div><div class="ttdoc">Unique identifier for the Face object.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:61</div></div>
+<div class="ttc" id="aclassHalfEdge_html"><div class="ttname"><a href="classHalfEdge.html">HalfEdge</a></div><div class="ttdoc">Represents a directed edge in a polygon.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:30</div></div>
+<div class="ttc" id="aclassHalfEdge_html_a02bbf630ad01fd4d7bf4af38e286844e"><div class="ttname"><a href="classHalfEdge.html#a02bbf630ad01fd4d7bf4af38e286844e">HalfEdge::prev</a></div><div class="ttdeci">HalfEdge * prev</div><div class="ttdoc">The previous edge in the face, preceding this edge in a counterclockwise direction around the inciden...</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:48</div></div>
+<div class="ttc" id="aclassHalfEdge_html_a37e7696a7131767a0c76e45ed69be4c5"><div class="ttname"><a href="classHalfEdge.html#a37e7696a7131767a0c76e45ed69be4c5">HalfEdge::twin</a></div><div class="ttdeci">HalfEdge * twin</div><div class="ttdoc">The other half of the edge, pointing to the vertex opposite to this edge.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:40</div></div>
+<div class="ttc" id="aclassHalfEdge_html_a54d9f243ea78bec79dcf983b81447fa1"><div class="ttname"><a href="classHalfEdge.html#a54d9f243ea78bec79dcf983b81447fa1">HalfEdge::f</a></div><div class="ttdeci">Face * f</div><div class="ttdoc">The face on the right side of the edge.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:36</div></div>
+<div class="ttc" id="aclassHalfEdge_html_a5918db069bb8b4a89e471c01a14fc6e1"><div class="ttname"><a href="classHalfEdge.html#a5918db069bb8b4a89e471c01a14fc6e1">HalfEdge::next</a></div><div class="ttdeci">HalfEdge * next</div><div class="ttdoc">The next edge in the face, following this edge in a counterclockwise direction around the incident ve...</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:44</div></div>
+<div class="ttc" id="aclassHalfEdge_html_ac239343aea2159d5958fc9eac51389d4"><div class="ttname"><a href="classHalfEdge.html#ac239343aea2159d5958fc9eac51389d4">HalfEdge::v</a></div><div class="ttdeci">Vertex * v</div><div class="ttdoc">vertex on which the edge is incident.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:33</div></div>
+<div class="ttc" id="aclassVertex_html"><div class="ttname"><a href="classVertex.html">Vertex</a></div><div class="ttdoc">Represents a vertex of the polygon.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

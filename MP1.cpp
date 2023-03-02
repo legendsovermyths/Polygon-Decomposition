@@ -72,16 +72,18 @@ bool MP1::primeMP1()
                 {
                     int contain = 0;
                     Vertex *notch = notches[i];
-                    for (int b = 0; b < L.size(); b++)
+                    if (r->isInside(notch))
                     {
-                        if (notch == L[b])
-                            contain = 1;
-                    }
-                    if (contain == 0 && r->isInside(notch) == 1 && isInside(v_st, v_end, notch) == 1)
-                    {
-                        cout << notch->index << '\n';
-                        L.pop_back();
-                        break;
+                        for (int b = 0; b < L.size(); b++)
+                        {
+                            if (notch == L[b])
+                                contain = 1;
+                        }
+                        if (contain == 0 && isInside(L, notch) == 1)
+                        {
+                            L.pop_back();
+                            break;
+                        }
                     }
                 }
             }
@@ -120,9 +122,6 @@ void MP1::merge()
         Vertex *v2 = addedEdges[i]->twin->v;
         Vertex *v2_next = addedEdges[i]->next->next->v;
         Vertex *v2_prev = addedEdges[i]->twin->prev->v;
-        cout << v1_prev->index << " " << v1->index << " " << v1_next->index << endl;
-        cout << v2_prev->index << " " << v2->index << " " << v2_next->index << endl;
-        cout << endl;
         if (orient(v1_prev, v1, v1_next) == 1 && orient(v2_prev, v2, v2_next) == 1)
         {
             polygon->removeEdge(addedEdges[i]);

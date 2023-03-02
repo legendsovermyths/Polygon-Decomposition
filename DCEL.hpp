@@ -74,7 +74,7 @@ class DCEL {
     /// @brief vector of Vertex objects containing all vertices in the polygon
     vector<Vertex *> vertices;
 
-    /// @brief vector of Edge objects containing all edges in the pollygon
+    /// @brief vector of Edge objects containing all edges in the polygon
     vector<Edge *> edges;
 
     /// @brief vector of Face objects containing all the faces iin the decomposed polygon

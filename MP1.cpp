@@ -8,16 +8,12 @@
 #include "MP1.hpp"
 #include "Utils.hpp"
 #include "DCEL.hpp"
+#include "Rectangle.hpp"
 
 MP1::MP1(DCEL *&dcel)
 {
     notches = getAllNotches(dcel->faces[EXTERNAL_FACE]);
     polygon = dcel;
-    for (int i = 0; i < notches.size(); i++)
-    {
-        cout << notches[i]->index << " ";
-    }
-    cout << '\n';
 }
 
 bool MP1::primeMP1()
@@ -48,11 +44,11 @@ bool MP1::primeMP1()
         next_begin = next_begin->next;
         vi_p = next_begin->next->v;
     }
-    for (int i = 0; i < L.size(); i++)
-    {
-        cout << L[i]->index << " ";
-    }
-    cout << '\n';
+    // for (int i = 0; i < L.size(); i++)
+    // {
+    //     cout << L[i]->index << " ";
+    // }
+    // cout << '\n';
     if (next_begin == begin)
     {
         return 1;
@@ -97,13 +93,13 @@ bool MP1::primeMP1()
 
     // cout << '\n'
     //      << endl;
-    for (int i = 0; i < L.size(); i++)
-    {
-        cout << L[i]->index << " ";
-    }
-    cout << '\n'
-         << endl;
-    ;
+    // for (int i = 0; i < L.size(); i++)
+    // {
+    //     cout << L[i]->index << " ";
+    // }
+    // cout << '\n'
+    //      << endl;
+    // ;
     if (L.size() > 2)
     {
         HalfEdge *h = polygon->addEdge(L[0], L[L.size() - 1], polygon->faces[1]);
@@ -112,9 +108,10 @@ bool MP1::primeMP1()
     return 0;
 }
 
-void MP1::merge()
+int MP1::merge()
 {
     vector<HalfEdge *> e;
+    int removed = 0;
     for (int i = 0; i < addedEdges.size(); i++)
     {
         Vertex *v1 = addedEdges[i]->v;
@@ -126,9 +123,11 @@ void MP1::merge()
         if (orient(v1_prev, v1, v1_next) == 1 && orient(v2_prev, v2, v2_next) == 1)
         {
             polygon->removeEdge(addedEdges[i]);
+            removed++;
         }
         else
             e.push_back(addedEdges[i]);
     }
     addedEdges = e;
+    return removed;
 }

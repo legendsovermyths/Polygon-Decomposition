@@ -3,6 +3,8 @@ from polygenerator import (
     random_star_shaped_polygon,
     random_convex_polygon,
 )
+import shutil
+import sys
 # these two are only for demonstration
 import matplotlib.pyplot as plt
 import random
@@ -26,20 +28,25 @@ def plot_polygon(polygon, out_file_name):
     plt.close()
 
 
-num_points = 20
-polygon = random_polygon(num_points=20)
-polygon.reverse()
+num_points = 10
+polygon_ = random_polygon(num_points=10)
+polygon_.reverse()
+polygon = []
+for (x, y) in polygon_:
+    x *= 100
+    y *= 100
+    polygon.append((x, y))
 i = 0
 f = open("input.txt", "w")
 f.write(str(num_points)+"\n")
 for (x, y) in polygon:
-    x *= 100
-    y *= 100
     f.write(str(x) + " " + str(y)+"\n")
     i += 1
 
 f.close()
-print(polygon)
+# args = len(sys.argv)
+# if args > 1:
+#     shutil.copy("input.txt", "./Test/test"+str(sys.argv[1])+".txt")
 # [(0.752691110661913, 0.948158571633034), (0.7790276993942304, 0.05437135270534656), ..., (0.633385213909564, 0.7365967958574935)]
 
 plot_polygon(polygon, "random_polygon.png")

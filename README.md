@@ -1,15 +1,9 @@
-<div class="titlepage">
-
-<div class="center">
-
 # Polygon Decomposition
 This project is about decomposing a simple polygon into convex polygons
-by creating diagonals and using [DCEL](#class_d_c_e_l) data structure to
+by creating diagonals and using the DCEL data structure to
 store the polygon.
-<div id="index">
-</div>
 
-## Double-Connected Edge List (DCEL):
+## 1. Double-Connected Edge List (DCEL):
 DCEL (Doubly Connected Edge List) is a data structure commonly used to represent planar subdivisions of a
 2D surface.
 
@@ -21,21 +15,22 @@ incident edge on its boundary.
 DCEL is often used in computational geometry algorithms, such as computing Voronoi diagrams and Delaunay
 triangulations.
 
-### Face:
-It contains a HalfEdge pointer pointing to one of the HalfEdge objects in the Face. Additionally, it has an id attribute
-to uniquely identify each Face object.
+  ### 1.1 HalfEdge:
+  A HalfEdge stores information about one half of an edge in the polygon. Each edge in the polygon is represented
+  by two HalfEdge objects, one for each direction along the edge. The HalfEdge class stores information about the
+  vertex on which the edge is incident, the face on the right side of the edge, and pointers to the other half of the edge
+  and its neighboring edges.
 
-### HalfEdge:
-A HalfEdge stores information about one half of an edge in the polygon. Each edge in the polygon is represented
-by two HalfEdge objects, one for each direction along the edge. The HalfEdge class stores information about the
-vertex on which the edge is incident, the face on the right side of the edge, and pointers to the other half of the edge
-and its neighboring edges.
+  ### 1.2 Edge
+  An edge in a DCEL data structure is defined as the line segment between two vertices in the polygon. It is represented by two HalfEdge
+  objects, with one HalfEdge representing each directed end of the edge. The pair of HalfEdge objects are stored as a pair in the edge member
+  variable of the Edge class.
+  
+  ### 1.3 Face:
+  It contains a HalfEdge pointer pointing to one of the HalfEdge objects in the Face. Additionally, it has an id attribute
+  to uniquely identify each Face object.
 
-### Edge
-An edge in a DCEL data structure is defined as the line segment between two vertices in the polygon. It is represented by two HalfEdge
-objects, with one HalfEdge representing each directed end of the edge. The pair of HalfEdge objects are stored as a pair in the edge member variable of the Edge class.
-
-## The MP1 Algorithm:
+## 2. The MP1 Algorithm:
 The MP1 class constructor takes a doubly connected edge list (DCEL) as input and initializes the notches vector
 by calling the getAllNotches() function on the external face of the input polygon. It then initializes the polygon data
 member and prints out the indices of all the notches in the input polygon.

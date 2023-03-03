@@ -1,7 +1,7 @@
 # Polygon Decomposition
 This project is about decomposing a simple polygon into convex polygons
 by creating diagonals and using the DCEL data structure to
-store the polygon.
+store the polygon using the algorithm described in this [paper]("Algorithms for the decomposition of a polygon into convex.pdf")
 
 ## 1. Double-Connected Edge List (DCEL):
 DCEL (Doubly Connected Edge List) is a data structure commonly used to represent planar subdivisions of a

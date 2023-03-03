@@ -1,15 +1,21 @@
 \hypertarget{_utils_8hpp_source}{}\doxysection{Utils.\+hpp}
-
+\mbox{\hyperlink{_utils_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ UTIL\_HPP\ }\textcolor{comment}{//\ include\ guard}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ UTIL\_HPP}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}DCEL.hpp"{}}}
-\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keywordtype}{bool}\ orient(\mbox{\hyperlink{class_vertex}{Vertex}}\ *v1,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ *v2,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ *v3);}
-\DoxyCodeLine{00008\ vector<Vertex\ *>\ getAllNotches(\mbox{\hyperlink{class_face}{Face}}\ *f);}
-\DoxyCodeLine{00009\ \textcolor{keywordtype}{bool}\ isInside(\mbox{\hyperlink{class_vertex}{Vertex}}\ *p1,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ *p2,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ *p3);}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ UTIL\_HPP\ }\textcolor{comment}{//\ include\ guard}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ UTIL\_HPP}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_d_c_e_l_8hpp}{DCEL.hpp}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_line_8hpp}{Line.hpp}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_utils_8hpp_a34bd45ddb8ad75cead9865fdd72bc450}{orient}}(\mbox{\hyperlink{class_vertex}{Vertex}}\ *v1,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ *v2,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ *v3);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00030\ vector<Vertex\ *>\ \mbox{\hyperlink{_utils_8hpp_af0e208152de81a50ea2d788ccf79180b}{getAllNotches}}(\mbox{\hyperlink{class_face}{Face}}\ *f);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_utils_8hpp_ab5fc565aa16a33e0ef04bdf8024f4665}{intersect}}(\mbox{\hyperlink{class_line}{Line}}\ *l1,\ \mbox{\hyperlink{class_line}{Line}}\ *l2);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_utils_8hpp_a7cc61c212a8a91c3305261940310eae1}{isInside}}(vector<Vertex\ *>\ \&L,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ *notch);}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['id_0',['id',['../class_face.html#afc24894bb86996e7238be7031e4873ac',1,'Face']]]
+  ['halfedge_0',['HalfEdge',['../class_half_edge.html',1,'']]],
+  ['he_1',['he',['../class_face.html#a59e25df6ddffe19b386a85fbc7707ce9',1,'Face']]]
 ];

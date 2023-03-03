@@ -1,3 +1,9 @@
+///@file dcel.hpp
+///@brief Defines classes and functions for Doubly Connected Edge List (DCEL) data structure to represent planar subdivisions of a 2D surface.
+///
+///A DCEL consists of a set of vertices, edges, and faces, with relationships between them, that can represent any planar graph or polygon.
+///It is commonly used in computational geometry algorithms, such as computing Voronoi diagrams and Delaunay triangulations.
+///
 #ifndef DCEL_HPP // include guard
 #define DCEL_HPP
 #include <iostream>
@@ -5,8 +11,8 @@
 #include <vector>
 using namespace std;
 
-/// @brief Represents a face of the polygon
-/// @note A face is a circular linked-list of half-edges that represents a polygon
+
+// forward declarations
 class Face;
 
 /// @brief Represents a vertex of the polygon.
@@ -71,8 +77,7 @@ class Face {
 /// are stored as a pair in the edge member variable of the Edge class.
 class Edge {
 public:
-  ///< A pair of HalfEdge objects representing the two directed ends of the edge.
-  pair<HalfEdge *, HalfEdge *> edge;
+  pair<HalfEdge *, HalfEdge *> edge; ///< A pair of HalfEdge objects representing the two directed ends of the edge.
   /// @brief Constructs an Edge object with the specified HalfEdge objects representing the two ends of the edge.
   /// @param a The HalfEdge object representing one end of the edge.
   /// @param b The HalfEdge object representing the other end of the edge.

@@ -1,3 +1,5 @@
+/// @file rectangle.cpp
+/// @brief Implementation file for the Rectangle class, used for creating a rectangular boundary around a set of vertices.
 #include "Rectangle.hpp"
 #include "DCEL.hpp"
 

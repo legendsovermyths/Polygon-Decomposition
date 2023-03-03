@@ -1,27 +1,20 @@
+///@file DCEL.cpp
+///@brief Implementation of the DCEL class
 #include "DCEL.hpp"
 
-/// @brief
-/// @param n
-Face::Face(int n) {
+    Face::Face(int n) {
     id = n;
 }
-/// @brief Initialize an edge to contain two half-edges
-/// @param a First half-edge
-/// @param b Second half-edge
+
 Edge::Edge(HalfEdge *a, HalfEdge *b) {
     edge.first = a;
     edge.second = b;
 }
-/// @brief initialzes the DCEL to connect one exterior face
+
 DCEL::DCEL() {
     faces.push_back(new Face(0));
 }
 
-/// @brief adds edge between two vertices present in a face.
-/// @param v1 Vertex from which the edge has to made and returned.
-/// @param v2 Vertex to which edge has to be retuned.
-/// @param currFace currFace The face that needs to be split by the added edge.
-/// @return The HalfEdge from v1.
 HalfEdge *DCEL::addEdge(Vertex *&v1, Vertex *&v2, Face *&currFace) {
     int fid = currFace->id;
     HalfEdge *fromV1 = new HalfEdge();
@@ -74,8 +67,7 @@ HalfEdge *DCEL::addEdge(Vertex *&v1, Vertex *&v2, Face *&currFace) {
     return fromV1;
     // TODO: implement joining  logic
 }
-/// @brief
-/// @param h
+
 void DCEL::removeEdge(HalfEdge *&h) {
     HalfEdge *t = h->twin;
     HalfEdge *h1_prev = h->prev;
@@ -104,9 +96,7 @@ void DCEL::removeEdge(HalfEdge *&h) {
     }
     faces = f;
 }
-/// @brief
-/// @param x
-/// @param y
+
 void DCEL::addVertex(double x, double y) {
     Vertex *v = new Vertex();
     v->x = x;

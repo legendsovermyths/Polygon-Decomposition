@@ -72,46 +72,47 @@ $(function() {
   <div class="headertitle"><div class="title">MP1.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef MP1_HPP </span><span class="comment">// include guard</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define MP1_HPP</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;time.h&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;DCEL.hpp&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Rectangle.hpp&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define EXTERNAL_FACE 0</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define WORKING_FACE 1</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_m_p1.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="class_m_p1.html">MP1</a></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">int</span> st = 0;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_m_p1.html#a2da99292b94f8398846dc013a25218b3">   22</a></span>    <a class="code hl_class" href="class_d_c_e_l.html">DCEL</a> *<a class="code hl_variable" href="class_m_p1.html#a2da99292b94f8398846dc013a25218b3">polygon</a>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_m_p1.html#aef7407e8e3ebf62a716959e35b514ec4">   25</a></span>    vector&lt;Vertex *&gt; <a class="code hl_variable" href="class_m_p1.html#aef7407e8e3ebf62a716959e35b514ec4">L</a>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_m_p1.html#aed5530e8f23e632b2f0c36bca032fe42">   28</a></span>    vector&lt;HalfEdge *&gt; <a class="code hl_variable" href="class_m_p1.html#aed5530e8f23e632b2f0c36bca032fe42">addedEdges</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_m_p1.html#a4331ffdec6e9a0133fa40110caf1d808">   31</a></span>    vector&lt;Vertex *&gt; <a class="code hl_variable" href="class_m_p1.html#a4331ffdec6e9a0133fa40110caf1d808">notches</a>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_class" href="class_m_p1.html">MP1</a>(<a class="code hl_class" href="class_d_c_e_l.html">DCEL</a> *&amp;dcel);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_p1.html#a91a97580147e9c43f3b697ba6ae23edb">primeMP1</a>();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_m_p1.html#a0959662a52206f1a9b4509e274274354">merge</a>();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_d_c_e_l_html"><div class="ttname"><a href="class_d_c_e_l.html">DCEL</a></div><div class="ttdoc">A data structure that represents a planar subdivision of a 2D surface.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:90</div></div>
-<div class="ttc" id="aclass_m_p1_html"><div class="ttname"><a href="class_m_p1.html">MP1</a></div><div class="ttdoc">Algorithm to decompose a simple polygon into a number of convex polygons.</div><div class="ttdef"><b>Definition:</b> MP1.hpp:16</div></div>
-<div class="ttc" id="aclass_m_p1_html_a0959662a52206f1a9b4509e274274354"><div class="ttname"><a href="class_m_p1.html#a0959662a52206f1a9b4509e274274354">MP1::merge</a></div><div class="ttdeci">void merge()</div><div class="ttdoc">This function merges the separate convex polygons obtained from MP1 by removing the inessential,...</div><div class="ttdef"><b>Definition:</b> MP1.cpp:112</div></div>
-<div class="ttc" id="aclass_m_p1_html_a2da99292b94f8398846dc013a25218b3"><div class="ttname"><a href="class_m_p1.html#a2da99292b94f8398846dc013a25218b3">MP1::polygon</a></div><div class="ttdeci">DCEL * polygon</div><div class="ttdoc">A Double connected edge list data structure to store all the information of the main polygon.</div><div class="ttdef"><b>Definition:</b> MP1.hpp:22</div></div>
-<div class="ttc" id="aclass_m_p1_html_a4331ffdec6e9a0133fa40110caf1d808"><div class="ttname"><a href="class_m_p1.html#a4331ffdec6e9a0133fa40110caf1d808">MP1::notches</a></div><div class="ttdeci">vector&lt; Vertex * &gt; notches</div><div class="ttdoc">vector of Vertex objects containing all notches of the input polygon</div><div class="ttdef"><b>Definition:</b> MP1.hpp:31</div></div>
-<div class="ttc" id="aclass_m_p1_html_a91a97580147e9c43f3b697ba6ae23edb"><div class="ttname"><a href="class_m_p1.html#a91a97580147e9c43f3b697ba6ae23edb">MP1::primeMP1</a></div><div class="ttdeci">bool primeMP1()</div><div class="ttdoc">This function implements the MP1 algorithm as given in the paper. It decomposes the input polygon int...</div><div class="ttdef"><b>Definition:</b> MP1.cpp:20</div></div>
-<div class="ttc" id="aclass_m_p1_html_aed5530e8f23e632b2f0c36bca032fe42"><div class="ttname"><a href="class_m_p1.html#aed5530e8f23e632b2f0c36bca032fe42">MP1::addedEdges</a></div><div class="ttdeci">vector&lt; HalfEdge * &gt; addedEdges</div><div class="ttdoc">vector of HalfEdge objects containing half edges of all the added diagonal partition edges in the pol...</div><div class="ttdef"><b>Definition:</b> MP1.hpp:28</div></div>
-<div class="ttc" id="aclass_m_p1_html_aef7407e8e3ebf62a716959e35b514ec4"><div class="ttname"><a href="class_m_p1.html#aef7407e8e3ebf62a716959e35b514ec4">MP1::L</a></div><div class="ttdeci">vector&lt; Vertex * &gt; L</div><div class="ttdoc">vector of Vertex objects containing all vertices of the next future convex polygon of the partition</div><div class="ttdef"><b>Definition:</b> MP1.hpp:25</div></div>
+<a href="_m_p1_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#ifndef MP1_HPP </span><span class="comment">// include guard</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#define MP1_HPP</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_d_c_e_l_8hpp.html">DCEL.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_rectangle_8hpp.html">Rectangle.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define EXTERNAL_FACE 0</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define WORKING_FACE 1</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_m_p1.html">   34</a></span><span class="keyword">class </span><a class="code hl_class" href="class_m_p1.html">MP1</a> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">int</span> st = 0;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_m_p1.html#a2da99292b94f8398846dc013a25218b3">   40</a></span>    <a class="code hl_class" href="class_d_c_e_l.html">DCEL</a> *<a class="code hl_variable" href="class_m_p1.html#a2da99292b94f8398846dc013a25218b3">polygon</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_m_p1.html#aef7407e8e3ebf62a716959e35b514ec4">   43</a></span>    vector&lt;Vertex *&gt; <a class="code hl_variable" href="class_m_p1.html#aef7407e8e3ebf62a716959e35b514ec4">L</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_m_p1.html#aed5530e8f23e632b2f0c36bca032fe42">   46</a></span>    vector&lt;HalfEdge *&gt; <a class="code hl_variable" href="class_m_p1.html#aed5530e8f23e632b2f0c36bca032fe42">addedEdges</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_m_p1.html#a4331ffdec6e9a0133fa40110caf1d808">   49</a></span>    vector&lt;Vertex *&gt; <a class="code hl_variable" href="class_m_p1.html#a4331ffdec6e9a0133fa40110caf1d808">notches</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_class" href="class_m_p1.html">MP1</a>(<a class="code hl_class" href="class_d_c_e_l.html">DCEL</a> *&amp;dcel);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_p1.html#a91a97580147e9c43f3b697ba6ae23edb">primeMP1</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_m_p1.html#a0959662a52206f1a9b4509e274274354">merge</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_d_c_e_l_8hpp_html"><div class="ttname"><a href="_d_c_e_l_8hpp.html">DCEL.hpp</a></div><div class="ttdoc">Defines classes and functions for Doubly Connected Edge List (DCEL) data structure to represent plana...</div></div>
+<div class="ttc" id="a_rectangle_8hpp_html"><div class="ttname"><a href="_rectangle_8hpp.html">Rectangle.hpp</a></div><div class="ttdoc">Declaration of Rectangle class for representing a rectangle whose edges are parallel to the coordinat...</div></div>
+<div class="ttc" id="aclass_d_c_e_l_html"><div class="ttname"><a href="class_d_c_e_l.html">DCEL</a></div><div class="ttdoc">A data structure that represents a planar subdivision of a 2D surface.</div><div class="ttdef"><b>Definition:</b> DCEL.hpp:95</div></div>
+<div class="ttc" id="aclass_m_p1_html"><div class="ttname"><a href="class_m_p1.html">MP1</a></div><div class="ttdoc">Algorithm to decompose a simple polygon into a number of convex polygons.</div><div class="ttdef"><b>Definition:</b> MP1.hpp:34</div></div>
+<div class="ttc" id="aclass_m_p1_html_a0959662a52206f1a9b4509e274274354"><div class="ttname"><a href="class_m_p1.html#a0959662a52206f1a9b4509e274274354">MP1::merge</a></div><div class="ttdeci">void merge()</div><div class="ttdoc">This function merges the separate convex polygons obtained from MP1 by removing the inessential,...</div><div class="ttdef"><b>Definition:</b> MP1.cpp:115</div></div>
+<div class="ttc" id="aclass_m_p1_html_a2da99292b94f8398846dc013a25218b3"><div class="ttname"><a href="class_m_p1.html#a2da99292b94f8398846dc013a25218b3">MP1::polygon</a></div><div class="ttdeci">DCEL * polygon</div><div class="ttdoc">A Double connected edge list data structure to store all the information of the main polygon.</div><div class="ttdef"><b>Definition:</b> MP1.hpp:40</div></div>
+<div class="ttc" id="aclass_m_p1_html_a4331ffdec6e9a0133fa40110caf1d808"><div class="ttname"><a href="class_m_p1.html#a4331ffdec6e9a0133fa40110caf1d808">MP1::notches</a></div><div class="ttdeci">vector&lt; Vertex * &gt; notches</div><div class="ttdoc">vector of Vertex objects containing all notches of the input polygon</div><div class="ttdef"><b>Definition:</b> MP1.hpp:49</div></div>
+<div class="ttc" id="aclass_m_p1_html_a91a97580147e9c43f3b697ba6ae23edb"><div class="ttname"><a href="class_m_p1.html#a91a97580147e9c43f3b697ba6ae23edb">MP1::primeMP1</a></div><div class="ttdeci">bool primeMP1()</div><div class="ttdoc">This function implements the MP1 algorithm as given in the paper. It decomposes the input polygon int...</div><div class="ttdef"><b>Definition:</b> MP1.cpp:23</div></div>
+<div class="ttc" id="aclass_m_p1_html_aed5530e8f23e632b2f0c36bca032fe42"><div class="ttname"><a href="class_m_p1.html#aed5530e8f23e632b2f0c36bca032fe42">MP1::addedEdges</a></div><div class="ttdeci">vector&lt; HalfEdge * &gt; addedEdges</div><div class="ttdoc">vector of HalfEdge objects containing half edges of all the added diagonal partition edges in the pol...</div><div class="ttdef"><b>Definition:</b> MP1.hpp:46</div></div>
+<div class="ttc" id="aclass_m_p1_html_aef7407e8e3ebf62a716959e35b514ec4"><div class="ttname"><a href="class_m_p1.html#aef7407e8e3ebf62a716959e35b514ec4">MP1::L</a></div><div class="ttdeci">vector&lt; Vertex * &gt; L</div><div class="ttdoc">vector of Vertex objects containing all vertices of the next future convex polygon of the partition</div><div class="ttdef"><b>Definition:</b> MP1.hpp:43</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

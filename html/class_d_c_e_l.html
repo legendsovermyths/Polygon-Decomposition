@@ -157,7 +157,6 @@ It stores information about the vertices, edges, and faces of the subdivision, a
 </div><div class="memdoc">
 
 <p>Default constructor for the <a class="el" href="class_d_c_e_l.html" title="A data structure that represents a planar subdivision of a 2D surface.">DCEL</a> class. </p>
-<p>initialzes the <a class="el" href="class_d_c_e_l.html" title="A data structure that represents a planar subdivision of a 2D surface.">DCEL</a> to connect one exterior face</p>
 <p>This constructor initializes an empty <a class="el" href="class_d_c_e_l.html" title="A data structure that represents a planar subdivision of a 2D surface.">DCEL</a> data structure with no vertices, edges, or faces. </p>
 
 </div>
@@ -216,7 +215,6 @@ It stores information about the vertices, edges, and faces of the subdivision, a
 </div><div class="memdoc">
 
 <p>Adds a new edge between two vertices in a face, splitting the face into two. </p>
-<p>adds edge between two vertices present in a face.</p>
 <p>This function creates a new edge between two existing vertices in a given face and splits the face into two new faces. The new edge is returned, and its twin edge is also created and returned. The new edge starts at <code>v1</code> and ends at <code>v2</code>. The <code>currFace</code> parameter specifies the face that needs to be split by the added edge.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -226,16 +224,7 @@ It stores information about the vertices, edges, and faces of the subdivision, a
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_half_edge.html" title="Represents a directed edge in a polygon.">HalfEdge</a> starting at <code>v1</code> in the new edge.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">v1</td><td><a class="el" href="class_vertex.html" title="Represents a vertex of the polygon.">Vertex</a> from which the edge has to made and returned. </td></tr>
-    <tr><td class="paramname">v2</td><td><a class="el" href="class_vertex.html" title="Represents a vertex of the polygon.">Vertex</a> to which edge has to be retuned. </td></tr>
-    <tr><td class="paramname">currFace</td><td>currFace The face that needs to be split by the added edge. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_half_edge.html" title="Represents a directed edge in a polygon.">HalfEdge</a> from v1. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_half_edge.html" title="Represents a directed edge in a polygon.">HalfEdge</a> starting at <code>v1</code> in the new edge. </dd></dl>
 
 </div>
 </div>
@@ -297,9 +286,7 @@ It stores information about the vertices, edges, and faces of the subdivision, a
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The x-coordinate of the new vertex. </td></tr>
-    <tr><td class="paramname">y</td><td>The y-coordinate of the new vertex.</td></tr>
-    <tr><td class="paramname">x</td><td></td></tr>
-    <tr><td class="paramname">y</td><td></td></tr>
+    <tr><td class="paramname">y</td><td>The y-coordinate of the new vertex. </td></tr>
   </table>
   </dd>
 </dl>
@@ -399,8 +386,7 @@ It stores information about the vertices, edges, and faces of the subdivision, a
 <p>Removes the half-edge h. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">h</td><td>The half-edge that has to be removed</td></tr>
-    <tr><td class="paramname">h</td><td></td></tr>
+    <tr><td class="paramname">h</td><td>The half-edge that has to be removed </td></tr>
   </table>
   </dd>
 </dl>
@@ -409,7 +395,7 @@ It stores information about the vertices, edges, and faces of the subdivision, a
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_d_c_e_l_8hpp_source.html">DCEL.hpp</a></li>
-<li>DCEL.cpp</li>
+<li><a class="el" href="_d_c_e_l_8cpp.html">DCEL.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

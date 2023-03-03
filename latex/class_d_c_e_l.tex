@@ -73,8 +73,6 @@ It stores information about the vertices, edges, and faces of the subdivision, a
 
 Default constructor for the \mbox{\hyperlink{class_d_c_e_l}{DCEL}} class. 
 
-initialzes the \mbox{\hyperlink{class_d_c_e_l}{DCEL}} to connect one exterior face
-
 This constructor initializes an empty \mbox{\hyperlink{class_d_c_e_l}{DCEL}} data structure with no vertices, edges, or faces. \mbox{\Hypertarget{class_d_c_e_l_ae0b6558a9490df6e8ec0eb1a0fffbec8}\label{class_d_c_e_l_ae0b6558a9490df6e8ec0eb1a0fffbec8}} 
 \index{DCEL@{DCEL}!````~DCEL@{$\sim$DCEL}}
 \index{````~DCEL@{$\sim$DCEL}!DCEL@{DCEL}}
@@ -98,8 +96,6 @@ This destructor frees the memory used by the \mbox{\hyperlink{class_d_c_e_l}{DCE
 
 Adds a new edge between two vertices in a face, splitting the face into two. 
 
-adds edge between two vertices present in a face.
-
 This function creates a new edge between two existing vertices in a given face and splits the face into two new faces. The new edge is returned, and its twin edge is also created and returned. The new edge starts at {\ttfamily v1} and ends at {\ttfamily v2}. The {\ttfamily curr\+Face} parameter specifies the face that needs to be split by the added edge.
 
 
@@ -112,19 +108,7 @@ This function creates a new edge between two existing vertices in a given face a
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The \mbox{\hyperlink{class_half_edge}{Half\+Edge}} starting at {\ttfamily v1} in the new edge.
-\end{DoxyReturn}
-
-\begin{DoxyParams}{Parameters}
-{\em v1} & \mbox{\hyperlink{class_vertex}{Vertex}} from which the edge has to made and returned. \\
-\hline
-{\em v2} & \mbox{\hyperlink{class_vertex}{Vertex}} to which edge has to be retuned. \\
-\hline
-{\em curr\+Face} & curr\+Face The face that needs to be split by the added edge. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The \mbox{\hyperlink{class_half_edge}{Half\+Edge}} from v1. 
+The \mbox{\hyperlink{class_half_edge}{Half\+Edge}} starting at {\ttfamily v1} in the new edge. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_d_c_e_l_aab9f40a960099fd5a1719d2c40c3b397}\label{class_d_c_e_l_aab9f40a960099fd5a1719d2c40c3b397}} 
 \index{DCEL@{DCEL}!addFace@{addFace}}
@@ -159,11 +143,7 @@ This function creates a new vertex with the specified {\ttfamily x} and {\ttfami
 \begin{DoxyParams}{Parameters}
 {\em x} & The x-\/coordinate of the new vertex. \\
 \hline
-{\em y} & The y-\/coordinate of the new vertex.\\
-\hline
-{\em x} & \\
-\hline
-{\em y} & \\
+{\em y} & The y-\/coordinate of the new vertex. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_d_c_e_l_a4334dbf4bbedce2d327f2f4fb88da697}\label{class_d_c_e_l_a4334dbf4bbedce2d327f2f4fb88da697}} 
@@ -222,14 +202,12 @@ Removes the half-\/edge h.
 
 
 \begin{DoxyParams}{Parameters}
-{\em h} & The half-\/edge that has to be removed\\
-\hline
-{\em h} & \\
+{\em h} & The half-\/edge that has to be removed \\
 \hline
 \end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-DCEL.\+hpp\item 
-DCEL.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_d_c_e_l_8hpp}{DCEL.\+hpp}}\item 
+\mbox{\hyperlink{_d_c_e_l_8cpp}{DCEL.\+cpp}}\end{DoxyCompactItemize}

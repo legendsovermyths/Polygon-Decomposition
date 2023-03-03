@@ -1,0 +1,115 @@
+\hypertarget{_utils_8hpp}{}\doxysection{Utils.\+hpp File Reference}
+\label{_utils_8hpp}\index{Utils.hpp@{Utils.hpp}}
+
+
+Contains utility functions for polygon decomposition using \mbox{\hyperlink{class_d_c_e_l}{DCEL}}.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}DCEL.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Line.\+hpp\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_utils_8hpp_a34bd45ddb8ad75cead9865fdd72bc450}{orient}} (\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$v1, \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$v2, \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$v3)
+\begin{DoxyCompactList}\small\item\em Determines whether a given vertex lies to the right or left of a line defined by two other vertices. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ $>$ \mbox{\hyperlink{_utils_8hpp_af0e208152de81a50ea2d788ccf79180b}{get\+All\+Notches}} (\mbox{\hyperlink{class_face}{Face}} $\ast$f)
+\begin{DoxyCompactList}\small\item\em Returns a vector of pointers to the \mbox{\hyperlink{class_vertex}{Vertex}} objects that are considered notches within a given \mbox{\hyperlink{class_face}{Face}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_utils_8hpp_ab5fc565aa16a33e0ef04bdf8024f4665}{intersect}} (\mbox{\hyperlink{class_line}{Line}} $\ast$l1, \mbox{\hyperlink{class_line}{Line}} $\ast$l2)
+\begin{DoxyCompactList}\small\item\em Determines whether two line segments intersect. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_utils_8hpp_a7cc61c212a8a91c3305261940310eae1}{is\+Inside}} (vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ $>$ \&L, \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$notch)
+\begin{DoxyCompactList}\small\item\em Checks if the Notch is inside the given polygon or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains utility functions for polygon decomposition using \mbox{\hyperlink{class_d_c_e_l}{DCEL}}. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_utils_8hpp_af0e208152de81a50ea2d788ccf79180b}\label{_utils_8hpp_af0e208152de81a50ea2d788ccf79180b}} 
+\index{Utils.hpp@{Utils.hpp}!getAllNotches@{getAllNotches}}
+\index{getAllNotches@{getAllNotches}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{getAllNotches()}{getAllNotches()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ $>$ get\+All\+Notches (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_face}{Face}} $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Returns a vector of pointers to the \mbox{\hyperlink{class_vertex}{Vertex}} objects that are considered notches within a given \mbox{\hyperlink{class_face}{Face}} object. 
+
+Here, a notch is defined as a \mbox{\hyperlink{class_vertex}{Vertex}} object in the \mbox{\hyperlink{class_face}{Face}} object where two \mbox{\hyperlink{class_half_edge}{Half\+Edge}} objects of the \mbox{\hyperlink{class_face}{Face}} object meet at a reflex angle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Pointer to the \mbox{\hyperlink{class_face}{Face}} object for which the notches need to be identified. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of pointers to the \mbox{\hyperlink{class_vertex}{Vertex}} objects representing the notches in the given face. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_utils_8hpp_ab5fc565aa16a33e0ef04bdf8024f4665}\label{_utils_8hpp_ab5fc565aa16a33e0ef04bdf8024f4665}} 
+\index{Utils.hpp@{Utils.hpp}!intersect@{intersect}}
+\index{intersect@{intersect}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily bool intersect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_line}{Line}} $\ast$}]{l1,  }\item[{\mbox{\hyperlink{class_line}{Line}} $\ast$}]{l2 }\end{DoxyParamCaption})}
+
+
+
+Determines whether two line segments intersect. 
+
+This function takes two pointers to \mbox{\hyperlink{class_line}{Line}} objects and checks whether their respective line segments intersect or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em l1} & A pointer to the first \mbox{\hyperlink{class_line}{Line}} object \\
+\hline
+{\em l2} & A pointer to the second \mbox{\hyperlink{class_line}{Line}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the line segments intersect, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_utils_8hpp_a7cc61c212a8a91c3305261940310eae1}\label{_utils_8hpp_a7cc61c212a8a91c3305261940310eae1}} 
+\index{Utils.hpp@{Utils.hpp}!isInside@{isInside}}
+\index{isInside@{isInside}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{isInside()}{isInside()}}
+{\footnotesize\ttfamily bool is\+Inside (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ $>$ \&}]{L,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{notch }\end{DoxyParamCaption})}
+
+
+
+Checks if the Notch is inside the given polygon or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & The polygon vertices sorted in cyclic order \\
+\hline
+{\em notch} & The notch needs to be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 id the notch is inside 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_utils_8hpp_a34bd45ddb8ad75cead9865fdd72bc450}\label{_utils_8hpp_a34bd45ddb8ad75cead9865fdd72bc450}} 
+\index{Utils.hpp@{Utils.hpp}!orient@{orient}}
+\index{orient@{orient}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{orient()}{orient()}}
+{\footnotesize\ttfamily bool orient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{v1,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{v2,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{v3 }\end{DoxyParamCaption})}
+
+
+
+Determines whether a given vertex lies to the right or left of a line defined by two other vertices. 
+
+Given three vertices v1, v2, and v3, this function determines the orientation of v3 with respect to the line segment defined by v1 and v2
+
+
+\begin{DoxyParams}{Parameters}
+{\em v1} & The first vertex defining the line \\
+\hline
+{\em v2} & The second vertex defining the line \\
+\hline
+{\em v3} & The vertex to be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if v3 lies to the right of or on the line defined by v1 and v2, false otherwise. 
+\end{DoxyReturn}

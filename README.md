@@ -30,12 +30,12 @@ triangulations.
   It contains a HalfEdge pointer pointing to one of the HalfEdge objects in the Face. Additionally, it has an id attribute
   to uniquely identify each Face object.
 
-## 2. The MP1 Algorithm:
-The MP1 class constructor takes a doubly connected edge list (DCEL) as input and initializes the notches vector
+## 2. The Decompose Algorithm:
+The Decompose class constructor takes a doubly connected edge list (DCEL) as input and initializes the notches vector
 by calling the getAllNotches() function on the external face of the input polygon. It then initializes the polygon data
 member and prints out the indices of all the notches in the input polygon.
 
-The primeMP1() function implements the main MP1 algorithm. It first initializes an empty list L, and then adds the
+The primeDecompose() function implements the main Decompose algorithm. It first initializes an empty list L, and then adds the
 first two vertices of the polygon to L. It then iterates over the remaining vertices of the polygon and adds them to L
 if they form a "convex corner" with the previous two vertices. If the polygon has only one edge, it returns true. If L
 has two or fewer vertices, it returns false. Otherwise, it repeatedly removes "inessential vertices" from L until L has

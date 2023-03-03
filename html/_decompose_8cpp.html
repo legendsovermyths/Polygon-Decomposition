@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Polygon Decomposition: Line.cpp File Reference</title>
+<title>Polygon Decomposition: Decompose.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,15 +69,19 @@ $(function() {
 
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">Line.cpp File Reference</div></div>
+  <div class="headertitle"><div class="title">Decompose.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This file contains the implementation of the <a class="el" href="class_line.html" title="A class representing a line segment defined by two vertices.">Line</a> class which represents a line segment between two vertices.  
+<p>Implementation of the <a class="el" href="class_decompose.html" title="Algorithm to decompose a simple polygon into a number of convex polygons.">Decompose</a> algorithm for polygon triangulation.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;../include/Line.hpp&quot;</code><br />
+<div class="textblock"><code>#include &quot;../include/Decompose.hpp&quot;</code><br />
+<code>#include &quot;../include/DCEL.hpp&quot;</code><br />
+<code>#include &quot;../include/Rectangle.hpp&quot;</code><br />
+<code>#include &quot;../include/Utils.hpp&quot;</code><br />
 </div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file contains the implementation of the <a class="el" href="class_line.html" title="A class representing a line segment defined by two vertices.">Line</a> class which represents a line segment between two vertices. </p>
+<div class="textblock"><p>Implementation of the <a class="el" href="class_decompose.html" title="Algorithm to decompose a simple polygon into a number of convex polygons.">Decompose</a> algorithm for polygon triangulation. </p>
+<p>The <a class="el" href="class_decompose.html" title="Algorithm to decompose a simple polygon into a number of convex polygons.">Decompose</a> algorithm is a variant of the ear-clipping method that is used to decompose a polygon into a set of triangles. This algorithm is capable of handling polygons with holes and is useful for a variety of applications in computer graphics and computational geometry. The <a class="el" href="class_decompose.html" title="Algorithm to decompose a simple polygon into a number of convex polygons.">Decompose</a> algorithm works by finding a sequence of vertices that form a simple polygon, and then removing inessential diagonals until the polygon is completely triangulated. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

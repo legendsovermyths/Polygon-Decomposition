@@ -17,9 +17,8 @@ Represents an edge in the \mbox{\hyperlink{class_d_c_e_l}{DCEL}} data structure 
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_edge_a768fac1fbb86dba870c4e2317d8471b5}\label{class_edge_a768fac1fbb86dba870c4e2317d8471b5}} 
-pair$<$ \mbox{\hyperlink{class_half_edge}{Half\+Edge}} $\ast$, \mbox{\hyperlink{class_half_edge}{Half\+Edge}} $\ast$ $>$ {\bfseries edge}
-\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<} A pair of \mbox{\hyperlink{class_half_edge}{Half\+Edge}} objects representing the two directed ends of the edge. \end{DoxyCompactList}\end{DoxyCompactItemize}
+pair$<$ \mbox{\hyperlink{class_half_edge}{Half\+Edge}} $\ast$, \mbox{\hyperlink{class_half_edge}{Half\+Edge}} $\ast$ $>$ \mbox{\hyperlink{class_edge_a768fac1fbb86dba870c4e2317d8471b5}{edge}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -38,22 +37,25 @@ An edge is defined as the line segment between two vertices in the polygon. It i
 
 Constructs an \mbox{\hyperlink{class_edge}{Edge}} object with the specified \mbox{\hyperlink{class_half_edge}{Half\+Edge}} objects representing the two ends of the edge. 
 
-Initialize an edge to contain two half-\/edges.
-
 
 \begin{DoxyParams}{Parameters}
 {\em a} & The \mbox{\hyperlink{class_half_edge}{Half\+Edge}} object representing one end of the edge. \\
 \hline
-{\em b} & The \mbox{\hyperlink{class_half_edge}{Half\+Edge}} object representing the other end of the edge.\\
-\hline
-{\em a} & First half-\/edge \\
-\hline
-{\em b} & Second half-\/edge \\
+{\em b} & The \mbox{\hyperlink{class_half_edge}{Half\+Edge}} object representing the other end of the edge. \\
 \hline
 \end{DoxyParams}
 
 
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_edge_a768fac1fbb86dba870c4e2317d8471b5}\label{class_edge_a768fac1fbb86dba870c4e2317d8471b5}} 
+\index{Edge@{Edge}!edge@{edge}}
+\index{edge@{edge}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{edge}{edge}}
+{\footnotesize\ttfamily pair$<$\mbox{\hyperlink{class_half_edge}{Half\+Edge}} $\ast$, \mbox{\hyperlink{class_half_edge}{Half\+Edge}} $\ast$$>$ Edge\+::edge}
+
+A pair of \mbox{\hyperlink{class_half_edge}{Half\+Edge}} objects representing the two directed ends of the edge. 
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-DCEL.\+hpp\item 
-DCEL.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_d_c_e_l_8hpp}{DCEL.\+hpp}}\item 
+\mbox{\hyperlink{_d_c_e_l_8cpp}{DCEL.\+cpp}}\end{DoxyCompactItemize}

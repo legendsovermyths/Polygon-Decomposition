@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['rectangle_0',['Rectangle',['../class_rectangle.html',1,'']]],
-  ['removeedge_1',['removeEdge',['../class_d_c_e_l.html#aec3ba67e24735cb104ffb799e0cdb84c',1,'DCEL']]]
+  ['polygon_0',['polygon',['../class_m_p1.html#a2da99292b94f8398846dc013a25218b3',1,'MP1']]],
+  ['polygon_20decomposition_1',['Polygon Decomposition',['../index.html',1,'']]],
+  ['polygon_2ddecomposition_2',['Polygon-Decomposition',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['prev_3',['prev',['../class_half_edge.html#a02bbf630ad01fd4d7bf4af38e286844e',1,'HalfEdge']]],
+  ['primemp1_4',['primeMP1',['../class_m_p1.html#a91a97580147e9c43f3b697ba6ae23edb',1,'MP1']]],
+  ['print_5f_5',['print_',['../class_d_c_e_l.html#a3b6dd77165405b3e8173da850b2f6c26',1,'DCEL']]]
 ];

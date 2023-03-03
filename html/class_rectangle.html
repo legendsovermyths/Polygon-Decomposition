@@ -77,7 +77,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>This class is used to make a <a class="el" href="class_rectangle.html" title="This class is used to make a Rectangle whose the edges are parallel to the coordinate.">Rectangle</a> whose the edges are parallel to the coordinate.  
+<p>This class is used to make a <a class="el" href="class_rectangle.html" title="This class is used to make a Rectangle whose the edges are parallel to the coordinate axis.">Rectangle</a> whose the edges are parallel to the coordinate axis.  
  <a href="class_rectangle.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_rectangle_8hpp_source.html">Rectangle.hpp</a>&gt;</code></p>
@@ -90,12 +90,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acdcd7a12df5319fc3121adc947ef67fc"><td class="memItemLeft" align="right" valign="top"><a id="acdcd7a12df5319fc3121adc947ef67fc" name="acdcd7a12df5319fc3121adc947ef67fc"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInside</b> (<a class="el" href="class_vertex.html">Vertex</a> *p)</td></tr>
 <tr class="separator:acdcd7a12df5319fc3121adc947ef67fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f0f367f5dc4d777acdc4a08b931cd70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rectangle.html#a7f0f367f5dc4d777acdc4a08b931cd70">Rectangle</a> (vector&lt; <a class="el" href="class_vertex.html">Vertex</a> * &gt; &amp;L)</td></tr>
+<tr class="memdesc:a7f0f367f5dc4d777acdc4a08b931cd70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_rectangle.html" title="This class is used to make a Rectangle whose the edges are parallel to the coordinate axis.">Rectangle</a> object from a vector of <a class="el" href="class_vertex.html" title="Represents a vertex of the polygon.">Vertex</a> pointers. The <a class="el" href="class_rectangle.html" title="This class is used to make a Rectangle whose the edges are parallel to the coordinate axis.">Rectangle</a> is created such that it encloses all the vertices in the input vector.  <br /></td></tr>
+<tr class="separator:a7f0f367f5dc4d777acdc4a08b931cd70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdcd7a12df5319fc3121adc947ef67fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rectangle.html#acdcd7a12df5319fc3121adc947ef67fc">isInside</a> (<a class="el" href="class_vertex.html">Vertex</a> *p)</td></tr>
+<tr class="memdesc:acdcd7a12df5319fc3121adc947ef67fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a given <a class="el" href="class_vertex.html" title="Represents a vertex of the polygon.">Vertex</a> lies inside the <a class="el" href="class_rectangle.html" title="This class is used to make a Rectangle whose the edges are parallel to the coordinate axis.">Rectangle</a>.  <br /></td></tr>
+<tr class="separator:acdcd7a12df5319fc3121adc947ef67fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a5c8689bed6fe856a707a270bd1bfb32a"><td class="memItemLeft" align="right" valign="top"><a id="a5c8689bed6fe856a707a270bd1bfb32a" name="a5c8689bed6fe856a707a270bd1bfb32a"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>x1</b></td></tr>
-<tr class="memdesc:a5c8689bed6fe856a707a270bd1bfb32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">x1 and y1 are the minimum x1 and y1 coordinate of the reactangle whereas x2 and y2 are the maximum coordinates. <br /></td></tr>
+<tr class="memitem:a5c8689bed6fe856a707a270bd1bfb32a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rectangle.html#a5c8689bed6fe856a707a270bd1bfb32a">x1</a></td></tr>
+<tr class="memdesc:a5c8689bed6fe856a707a270bd1bfb32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">x1 and y1 are the minimum x and y coordinates of the reactangle whereas x2 and y2 are the maximum coordinates.  <br /></td></tr>
 <tr class="separator:a5c8689bed6fe856a707a270bd1bfb32a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8369b1ad4aafc9454ee2a8e893d688c4"><td class="memItemLeft" align="right" valign="top"><a id="a8369b1ad4aafc9454ee2a8e893d688c4" name="a8369b1ad4aafc9454ee2a8e893d688c4"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>x2</b></td></tr>
@@ -108,10 +113,85 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>y2</b></td></tr>
 <tr class="separator:aac0e614e2300be083c38b6f73fd80cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class is used to make a <a class="el" href="class_rectangle.html" title="This class is used to make a Rectangle whose the edges are parallel to the coordinate.">Rectangle</a> whose the edges are parallel to the coordinate. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>This class is used to make a <a class="el" href="class_rectangle.html" title="This class is used to make a Rectangle whose the edges are parallel to the coordinate axis.">Rectangle</a> whose the edges are parallel to the coordinate axis. </p>
+<p>A class for representing a rectangle whose edges are parallel to the coordinate axes.</p>
+<p>The class stores the minimum and maximum coordinates along the x and y axes of the polygon. The coordinates are specified using the parameters x1, y1, x2, and y2. The class also has a method isInside() that takes a <a class="el" href="class_vertex.html" title="Represents a vertex of the polygon.">Vertex</a> pointer and returns true if the vertex lies inside the rectangle, and false otherwise. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a7f0f367f5dc4d777acdc4a08b931cd70" name="a7f0f367f5dc4d777acdc4a08b931cd70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f0f367f5dc4d777acdc4a08b931cd70">&#9670;&#160;</a></span>Rectangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rectangle::Rectangle </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_vertex.html">Vertex</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_rectangle.html" title="This class is used to make a Rectangle whose the edges are parallel to the coordinate axis.">Rectangle</a> object from a vector of <a class="el" href="class_vertex.html" title="Represents a vertex of the polygon.">Vertex</a> pointers. The <a class="el" href="class_rectangle.html" title="This class is used to make a Rectangle whose the edges are parallel to the coordinate axis.">Rectangle</a> is created such that it encloses all the vertices in the input vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">L</td><td>A vector of <a class="el" href="class_vertex.html" title="Represents a vertex of the polygon.">Vertex</a> pointers representing the vertices that the <a class="el" href="class_rectangle.html" title="This class is used to make a Rectangle whose the edges are parallel to the coordinate axis.">Rectangle</a> must enclose. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="acdcd7a12df5319fc3121adc947ef67fc" name="acdcd7a12df5319fc3121adc947ef67fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdcd7a12df5319fc3121adc947ef67fc">&#9670;&#160;</a></span>isInside()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Rectangle::isInside </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vertex.html">Vertex</a> *&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks whether a given <a class="el" href="class_vertex.html" title="Represents a vertex of the polygon.">Vertex</a> lies inside the <a class="el" href="class_rectangle.html" title="This class is used to make a Rectangle whose the edges are parallel to the coordinate axis.">Rectangle</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>A pointer to the <a class="el" href="class_vertex.html" title="Represents a vertex of the polygon.">Vertex</a> to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the <a class="el" href="class_vertex.html" title="Represents a vertex of the polygon.">Vertex</a> lies inside the <a class="el" href="class_rectangle.html" title="This class is used to make a Rectangle whose the edges are parallel to the coordinate axis.">Rectangle</a>, false otherwise. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5c8689bed6fe856a707a270bd1bfb32a" name="a5c8689bed6fe856a707a270bd1bfb32a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c8689bed6fe856a707a270bd1bfb32a">&#9670;&#160;</a></span>x1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Rectangle::x1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>x1 and y1 are the minimum x and y coordinates of the reactangle whereas x2 and y2 are the maximum coordinates. </p>
+<p>The minimum and maximum x and y coordinates of the rectangle. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_rectangle_8hpp_source.html">Rectangle.hpp</a></li>
-<li>Rectangle.cpp</li>
+<li><a class="el" href="_rectangle_8cpp.html">Rectangle.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

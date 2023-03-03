@@ -1,9 +1,14 @@
+///@file MP1.cpp
+///@brief Implementation of the MP1 algorithm for polygon triangulation.
+///
+/// The MP1 algorithm is a variant of the ear-clipping method that is used to decompose a polygon into a set of triangles.
+/// This algorithm is capable of handling polygons with holes and is useful for a variety of applications in computer graphics and computational geometry.
+/// The MP1 algorithm works by finding a sequence of vertices that form a simple polygon, and then removing inessential diagonals until the polygon is completely triangulated.
+///
 #include "MP1.hpp"
 #include "Utils.hpp"
 #include "DCEL.hpp"
 
-///@brief Finds all notches and prints them.
-///@param dcel Input polygon as a doubly connected edge list
 MP1::MP1(DCEL *&dcel)
 {
     notches = getAllNotches(dcel->faces[EXTERNAL_FACE]);
@@ -15,8 +20,6 @@ MP1::MP1(DCEL *&dcel)
     cout << '\n';
 }
 
-///@brief Main MP1 algorithm to decompose input polygon
-///@return 1 if polygon has only 1 edge, 0 otherwise
 bool MP1::primeMP1()
 {
     L.clear();
@@ -109,8 +112,6 @@ bool MP1::primeMP1()
     return 0;
 }
 
-///@brief Merging algorithm to remove inessential diagonals
-///@return void
 void MP1::merge()
 {
     vector<HalfEdge *> e;

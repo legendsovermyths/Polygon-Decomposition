@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['halfedge_0',['HalfEdge',['../class_half_edge.html',1,'']]],
-  ['he_1',['he',['../class_face.html#a59e25df6ddffe19b386a85fbc7707ce9',1,'Face']]]
+  ['getallnotches_0',['getAllNotches',['../_utils_8cpp.html#af0e208152de81a50ea2d788ccf79180b',1,'getAllNotches(Face *f):&#160;Utils.cpp'],['../_utils_8hpp.html#af0e208152de81a50ea2d788ccf79180b',1,'getAllNotches(Face *f):&#160;Utils.cpp']]]
 ];

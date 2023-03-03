@@ -1,0 +1,29 @@
+\hypertarget{_d_c_e_l_8hpp}{}\doxysection{DCEL.\+hpp File Reference}
+\label{_d_c_e_l_8hpp}\index{DCEL.hpp@{DCEL.hpp}}
+
+
+Defines classes and functions for Doubly Connected \mbox{\hyperlink{class_edge}{Edge}} List (\mbox{\hyperlink{class_d_c_e_l}{DCEL}}) data structure to represent planar subdivisions of a 2D surface.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_vertex}{Vertex}}
+\begin{DoxyCompactList}\small\item\em Represents a vertex of the polygon. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_half_edge}{Half\+Edge}}
+\begin{DoxyCompactList}\small\item\em Represents a directed edge in a polygon. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_face}{Face}}
+\begin{DoxyCompactList}\small\item\em This class represents a \mbox{\hyperlink{class_face}{Face}} object in the \mbox{\hyperlink{class_d_c_e_l}{DCEL}} data structure. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_edge}{Edge}}
+\begin{DoxyCompactList}\small\item\em Represents an edge in the \mbox{\hyperlink{class_d_c_e_l}{DCEL}} data structure as a pair of half edges. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_d_c_e_l}{DCEL}}
+\begin{DoxyCompactList}\small\item\em A data structure that represents a planar subdivision of a 2D surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines classes and functions for Doubly Connected \mbox{\hyperlink{class_edge}{Edge}} List (\mbox{\hyperlink{class_d_c_e_l}{DCEL}}) data structure to represent planar subdivisions of a 2D surface. 
+
+A \mbox{\hyperlink{class_d_c_e_l}{DCEL}} consists of a set of vertices, edges, and faces, with relationships between them, that can represent any planar graph or polygon. It is commonly used in computational geometry algorithms, such as computing Voronoi diagrams and Delaunay triangulations. 

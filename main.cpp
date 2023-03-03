@@ -1,14 +1,8 @@
-/**
- *@mainpage  Polygon Decomposition
- *A project on Simple Polygon decomposition. A simple polygon is decomposed to convex polygon by making diagonals and using DCEL to store the Polygon.
- *
- *
- */
-
-/**
- *@file         main.cpp
- *@brief        This is the main source code of the project. It uses API defined in this project to decompose the polygon.
- */
+/// @mainpage Polygon Decomposition
+/// This project is about decomposing a simple polygon into convex polygons by creating diagonals and using DCEL data structure to store the polygon.
+///
+/// @file main.cpp
+/// @brief This is the main source code of the project which utilizes APIs defined in this project to perform polygon decomposition.
 #include <iostream>
 #include <vector>
 #include "DCEL.hpp"

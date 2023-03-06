@@ -1,5 +1,19 @@
 /* The standard CSS for doxygen 1.9.6*/
-
+* {
+	box-sizing: border-box;
+  }
+  
+  .img-container {
+	float: left;
+	width: 50%;
+	padding: 5px;
+  }
+  
+  .clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
 html {
 /* page base colors */
 --page-background-color: white;

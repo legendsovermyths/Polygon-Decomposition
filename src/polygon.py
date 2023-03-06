@@ -27,17 +27,18 @@ def plot_polygon(polygon, out_file_name):
     plt.close()
 
 
-num_points = 10
-polygon_ = random_polygon(num_points=10)
-polygon_.reverse()
-polygon = []
-for (x, y) in polygon_:
-    x *= 100
-    y *= 100
-    polygon.append((x, y))
+num_points = 5
+# polygon_ = random_polygon(num_points=1000)
+# polygon_.reverse()
+# polygon = []
+# for (x, y) in polygon_:
+#     x *= 100
+#     y *= 100
+#     polygon.append((x, y))
 i = 0
 f = open("input.txt", "w")
 f.write(str(num_points)+"\n")
+polygon = [(0, 0), (0.001, 1), (0, 2), (2, 2), (2, 0)]
 for (x, y) in polygon:
     f.write(str(x) + " " + str(y)+"\n")
     i += 1

@@ -47,7 +47,7 @@ if flag == 1:
 else:
     print("Rejected")
 
-with open('time.txt') as f:
+with open('../results/time.txt') as f:
     t = f.readline()
 args = len(sys.argv)
 filename = "Result.csv"

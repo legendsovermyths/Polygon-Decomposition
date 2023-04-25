@@ -16,7 +16,7 @@ using namespace std;
 int main()
 {
     DCEL *dcel = new DCEL();
-    char in[] = "input.txt";
+    char in[] = "../data/input.txt";
     dcel->createPolygon(in);
     Decompose *decompose = new Decompose(dcel);
     auto start = high_resolution_clock::now();
@@ -27,7 +27,7 @@ int main()
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(stop - start);
     // dcel->print_();
-    char out[] = "output.txt";
+    char out[] = "../data/output.txt";
     dcel->outputPolygon(out);
     freopen("../results/time.txt", "w+", stdout);
     cout << duration.count();
